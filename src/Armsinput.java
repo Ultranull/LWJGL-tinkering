@@ -47,8 +47,8 @@ public class Armsinput extends JFrame{
 
 
     }
-    public Armsinput(float[] inits){
-        arm1x.setModel(new SpinnerNumberModel(inits[0],-0xff,-0xff,1));
+    public Armsinput(float[] inits){//screw you git
+        arm1x.setModel(new SpinnerNumberModel(inits[0],-0xff,0xff,1));
         arm1y.setModel(new SpinnerNumberModel(inits[1],-0xff,0xff,1));
         arm1z.setModel(new SpinnerNumberModel(inits[2],-0xff,0xff,1));
         arm2x.setModel(new SpinnerNumberModel(inits[3],-0xff,0xff,1));
