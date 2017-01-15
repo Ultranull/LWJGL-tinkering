@@ -11,6 +11,11 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.util.glu.GLU;
 
+
+import java.nio.FloatBuffer;
+
+import java.util.LinkedList;
+
 import static org.lwjgl.opengl.GL11.*;
 
 public class main {
@@ -108,22 +113,55 @@ public class main {
         drawLine(new Point(0,0,50,0,1,0),new Point(0,0,0-50,0,1,0));
         drawLine(new Point(50,0,0,1,0,0),new Point(-50,0,0,1,0,0));
 
+        rott2(l);
+
         ticks +=1;
     }
     private void drawLine(Point point, Point point2) {
         glBegin(GL_LINE_STRIP);
-
-        glColor3f(point.r,point.g,point.b);
-        glVertex3f(point.x, point.y,point.z);
-        glColor3f(point2.r,point2.g,point2.b);
-        glVertex3f(point2.x, point2.y,point2.z);
+        pointset(point);
+        pointset(point2);
         glEnd();
     }
-    float dw=0.01f;
+LinkedList l=rott1(new Point(0,0,0));
+    private LinkedList<Point> rott1(Point p) {
+        LinkedList<Point> points = new LinkedList<>();
+        int s = 360, ss = 30;
+        for (int i = 0; i < s*10; i++) {
+//            if (i % (360 / s) == 0)
+            {
+                float x = p.x + (float) (cos(i*1.125) * ss);
+                float y = p.y + (float) (sin(i) * ss);
+                float z = p.z + (float) (sin(i*1.125) * ss);
+                points.push(new Point(x, y, z, i%2, i%3, i%4));
+            }
+        }
+        return points;
+    }
+    private void rott2(LinkedList<Point> points){
+        glBegin(GL_POLYGON);
+        for (float i = 0; i < points.size(); i+=Math.abs(dd)+1) {
+            pointset(points.get((int) i));
+        }
+        glEnd();
+        glBegin(GL_LINE_LOOP);
+        for (float i = 0; i < points.size(); i+=1) {
+            pointset(points.get((int) i));
+        }
+        glEnd();
+    }
+
+
+    private void pointset(Point point){
+        glColor3f(point.r,point.g,point.b);
+        glVertex3f(point.x, point.y,point.z);
+    }
+
+    float dw=0.01f,dd=1;
     private void getInput(){
 
-        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) c.translate(-1,0,0);
-        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) c.translate(1,0,0);
+        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){ c.translate(-1,0,0);dd+=0.5;}
+        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ c.translate(1,0,0);dd-=0.5;}
         if (Keyboard.isKeyDown(Keyboard.KEY_UP)) c.rotate(1,0,1,1);
         if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) c.rotate(-1,0,1,1);
         dw+=(Mouse.getDWheel()/10000f);
@@ -151,5 +189,9 @@ public class main {
 
     double sin(double a){return Math.sin(Math.toRadians(a));}
     double cos(double a){return Math.cos(Math.toRadians(a));}
+
+
+
+
 
 }
