@@ -1,5 +1,9 @@
 package Shapes;
 
+import javax.swing.*;
+
+import static org.lwjgl.opengl.GL11.*;
+
 /**
  * Created by usr on 11/14/2016.
  *
@@ -9,30 +13,60 @@ public class Polygon {
     private Point origin;
     private Point[] verts;
     private Point[] normals;
-    private boolean isdis;
 
-    public Polygon(Point[] v,boolean i) {
+    public Polygon(Point[] v) {
         verts=v;
-        isdis=i;
         initnormals();
     }
-
+    public Polygon(Point[] v,Point o) {
+        verts=v;
+        origin=o;
+        initnormals();
+    }
     private void initnormals(){
         normals=new Point[verts.length-2];
         for(int i=0;i<normals.length;i++){
-            normals[i]=calcnormal(verts[0],verts[i+1],verts[i+2]);
+            if(origin!=null)
+                normals[i]=Polygon.calcnormal(verts[i+2].sub(origin),verts[i+1].sub(origin),verts[0].sub(origin));
+            else
+                normals[i]=Polygon.calcnormal(verts[i+2],verts[i+1],verts[0]);
         }
-    }
-
-    public void display(){
 
     }
-    private Point calcnormal(Point A,Point B,Point C){
+
+    public void draw(){
+        glBegin(GL_POLYGON);
+        for (Point vert : verts) {
+            glColor3f(vert.r, vert.g, vert.b);
+            glVertex3f(vert.x, vert.y, vert.z);
+        }
+        for(Point norm:normals)
+            glNormal3f(norm.x,norm.y,norm.z);
+        glEnd();
+    }
+    public static void draw(Point[] verts,boolean wire){
+        Point[] normals=new Point[verts.length-2];
+        for(int i=0;i<normals.length;i++){
+            normals[i]=Polygon.calcnormal(verts[i+2],verts[i+1],verts[0]);
+        }
+        if(wire)
+            glBegin(GL_LINE_LOOP);
+        else
+            glBegin(GL_POLYGON);
+        for (Point vert : verts) {
+            glColor3f(vert.r, vert.g, vert.b);
+            glVertex3f(vert.x, vert.y, vert.z);
+        }
+        for(Point norm:normals)
+            glNormal3f(norm.x,norm.y,norm.z);
+        glEnd();
+    }
+    public static Point calcnormal(Point A,Point B,Point C){
         Point V1= B.sub(A);
-        Point V2 = C.sub(A);
+        Point V2= C.sub(A);
         Point surfaceNormal=new Point(0,0,0);
-        surfaceNormal.x = (V1.y*V2.z) - (V1.z-V2.y);
-        surfaceNormal.y = - ( (V2.z * V1.x) - (V2.x * V1.z) );
+        surfaceNormal.x = (V1.y*V2.z) - (V1.z*V2.y);
+        surfaceNormal.y = (V1.z*V2.x) - (V1.x*V2.z);
         surfaceNormal.z = (V1.x*V2.y) - (V1.y*V2.x);
         surfaceNormal.normalize();
         return surfaceNormal;
@@ -55,6 +89,12 @@ public class Polygon {
         }
         return ans;
     }
+    public Point[] getVertsp(){
+        return verts;
+    }
+    public Point[] getNormalsp(){
+        return normals;
+    }
     public float[] getNormals(){
         float[] ans=new float[normals.length*3];
         for (int i=0;i<ans.length;i+=3){
@@ -70,13 +110,5 @@ public class Polygon {
 
     public void setOrigin(Point origin) {
         this.origin = origin;
-    }
-
-    public boolean isdis() {
-        return isdis;
-    }
-
-    public void setIsdis(boolean isdis) {
-        this.isdis = isdis;
     }
 }

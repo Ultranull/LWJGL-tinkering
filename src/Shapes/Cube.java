@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
+import java.util.Arrays;
 
 /**
  * Created by usr on 11/17/2016.*/
@@ -77,12 +78,12 @@ public class Cube {
         Point G=new Point(origin.x-w,origin.y-h,origin.z-l,1,0,0);
         Point H=new Point(origin.x+w,origin.y-h,origin.z-l,1,0,0);
         faces=new Polygon[]{
-                new Polygon(new Point[]{A, B, D, C}, false),
-                new Polygon(new Point[]{E, F, H, G}, false),
-                new Polygon(new Point[]{A, B, F, E}, false),
-                new Polygon(new Point[]{G, H, D, C}, false),
-                new Polygon(new Point[]{B, D, H, F}, false),
-                new Polygon(new Point[]{A, C, G, E}, false),
+                new Polygon(new Point[]{A, B, D, C},origin),
+                new Polygon(new Point[]{E, F, H, G},origin),
+                new Polygon(new Point[]{A, B, F, E},origin),
+                new Polygon(new Point[]{G, H, D, C},origin),
+                new Polygon(new Point[]{B, D, H, F},origin),
+                new Polygon(new Point[]{A, C, G, E},origin),
         };
         oinit();
     }
@@ -99,7 +100,7 @@ public class Cube {
         glBindBuffer(GL_ARRAY_BUFFER, VBONormalHandle);
         glBufferData(GL_ARRAY_BUFFER, makenormbuff(),GL_STATIC_DRAW);
     }
-    public void CreateVBO() {
+    public void draw() {
 
 
         glBindBuffer(GL_ARRAY_BUFFER, VBOVertexHandle);
@@ -111,6 +112,11 @@ public class Cube {
         glBindBuffer(GL_ARRAY_BUFFER, VBONormalHandle);
         glNormalPointer(GL_FLOAT, 0, 0);
 
+
+
+
+
+
         glPushMatrix();
         glTranslatef(origin.x,origin.y,origin.z);
         float amount=rx!=0?rx:ry!=0?ry:rz!=0?rz:0;
@@ -118,9 +124,24 @@ public class Cube {
         glRotatef(amount,tx,ty,tz);
         glTranslatef(-origin.x,-origin.y,-origin.z);
         if(isWrieframe)
-            glDrawArrays(GL_LINE_LOOP, 0, 4 * 6);
+        glDrawArrays(GL_LINE_LOOP, 0, 4 * 6);
         else
-            glDrawArrays(GL_QUADS, 0, 4 * 6);
+        glDrawArrays(GL_QUADS, 0, 4 * 6);
+        for(int c=0;c<faces.length;c++)
+            for(int i=0;i<faces[c].getVertsp().length-2;i++){
+                Point n=Polygon.calcnormal(
+                        faces[c].getVertsp()[i+2].sub(origin),
+                        faces[c].getVertsp()[i+1].sub(origin),
+                        faces[c].getVertsp()[0].sub(origin)
+                        );
+                n=n.sum(origin);
+                n.setRGB(0,1,1);
+                Polygon.draw(new Point[]{n,
+                        faces[c].getVertsp()[i+2],
+                        faces[c].getVertsp()[i+1],
+                        faces[c].getVertsp()[0]
+                        },true);
+            }
         glPopMatrix();
     }
     public FloatBuffer makecolorbuff(){

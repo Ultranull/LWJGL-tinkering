@@ -54,12 +54,19 @@ public class Point {
         this.x=x;
         this.y=y;
         this.z=z;
+    }public void setRGB(float x,float y,float z){
+        this.r=x;
+        this.g=y;
+        this.b=z;
     }
 public Point sub(Point p){
     return new Point(x-p.x,y-p.y,z-p.z);
 }
+public Point sum(Point p){
+    return new Point(x+p.x,y+p.y,z+p.z);
+}
     public void normalize(){
-        float v=distance(new Point(0,0,0));
+        float v=(float) Math.sqrt(x*x+y*y+z*z);
         setXYZ(x/v,y/v,z/v);
     }
     @Override

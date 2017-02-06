@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" afterPath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Cube.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Cube.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Point.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Point.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Polygon.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Polygon.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shapes/Cube.java" afterPath="$PROJECT_DIR$/src/Shapes/Cube.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shapes/Point.java" afterPath="$PROJECT_DIR$/src/Shapes/Point.java" />
@@ -41,8 +38,8 @@
       <file leaf-file-name="Cube.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shapes/Cube.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+            <state relative-caret-position="257">
+              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#maketexbuff#0;class#Cube#0" expanded="false" />
@@ -51,20 +48,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Shapes/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+              <folding>
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shapes/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+            <state relative-caret-position="968">
+              <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
               <folding>
-                <element signature="e#1749#1750#0" expanded="true" />
-                <element signature="e#1778#1779#0" expanded="true" />
-                <element signature="e#1821#1822#0" expanded="true" />
-                <element signature="e#1857#1858#0" expanded="true" />
-                <element signature="e#1887#1888#0" expanded="true" />
-                <element signature="e#1915#1916#0" expanded="true" />
-                <element signature="e#1958#1959#0" expanded="true" />
-                <element signature="e#1992#1993#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2598#2599#0" expanded="true" />
+                <element signature="e#2626#2627#0" expanded="true" />
+                <element signature="e#2660#2661#0" expanded="true" />
+                <element signature="e#2690#2691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,27 +80,11 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+            <state relative-caret-position="264">
+              <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initLight#0;class#main#0" expanded="false" />
-                <element signature="method#initGL#0;class#main#0" expanded="false" />
                 <element signature="method#drawLine#0;class#main#0" expanded="false" />
-                <element signature="method#calculateNormals#0;class#main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shapes/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-              <folding>
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1296#1297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +93,8 @@
       <file leaf-file-name="driver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -134,20 +125,20 @@
         <option value="$PROJECT_DIR$/src/Armsinput.form" />
         <option value="$PROJECT_DIR$/src/Armsinput.java" />
         <option value="$PROJECT_DIR$/src/rotarms.java" />
-        <option value="$PROJECT_DIR$/src/driver.java" />
         <option value="$PROJECT_DIR$/src/feild.java" />
         <option value="$PROJECT_DIR$/src/field.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Mesh.java" />
         <option value="$PROJECT_DIR$/src/tutorialstuff/LightinfTest1.java" />
-        <option value="$PROJECT_DIR$/src/tutorialstuff/GLApp.java" />
         <option value="$PROJECT_DIR$/src/tutorialstuff/GLImage.java" />
         <option value="$PROJECT_DIR$/src/tutorialstuff/GLApp_LightDemo.java" />
         <option value="$PROJECT_DIR$/src/tutorialstuff/GLApp_DemoLight.java" />
         <option value="$PROJECT_DIR$/src/Renderer.java" />
-        <option value="$PROJECT_DIR$/src/Shapes/Cube.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/tutorialstuff/GLApp.java" />
+        <option value="$PROJECT_DIR$/src/driver.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Point.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Polygon.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/Shapes/Cube.java" />
       </list>
     </option>
   </component>
@@ -316,74 +307,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tutorialstuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shapes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
@@ -948,7 +872,7 @@
       <workItem from="1484694162243" duration="2616000" />
       <workItem from="1484846617709" duration="10078000" />
       <workItem from="1485830480348" duration="7063000" />
-      <workItem from="1486056282688" duration="36273000" />
+      <workItem from="1486056282688" duration="46388000" />
     </task>
     <task id="LOCAL-00001" summary="boop">
       <created>1484508841802</created>
@@ -957,11 +881,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484508841802</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="just some major improvements">
+      <created>1486395146286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1486395146286</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112664000" />
+    <option name="totallyTimeSpent" value="122779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -983,25 +914,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3311111" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3076075" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33076075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036177106" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3402299" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892008" sideWeight="0.50567263" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15545756" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60198456" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1017,15 +948,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="boop" />
-    <option name="LAST_COMMIT_MESSAGE" value="boop" />
+    <MESSAGE value="just some major improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="just some major improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="vbo" language="JAVA" />
+        <watch expression="c" />
+        <watch expression="i" />
+        <watch expression="faces.length" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -1078,10 +1013,7 @@
           <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
             <element signature="method#drawLine#0;class#main#0" expanded="false" />
-            <element signature="method#calculateNormals#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1129,10 +1061,7 @@
           <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
             <element signature="method#drawLine#0;class#main#0" expanded="false" />
-            <element signature="method#calculateNormals#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,10 +1121,7 @@
           <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
             <element signature="method#drawLine#0;class#main#0" expanded="false" />
-            <element signature="method#calculateNormals#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,17 +1262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tutorialstuff/GLApp_DemoLight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#initDisplayTESTTEMP#0;class#GLApp_DemoLight#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tutorialstuff/GLImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1361,106 +1276,6 @@
             <element signature="e#7135#7136#0" expanded="true" />
             <element signature="e#7282#7283#0" expanded="true" />
             <element signature="e#7316#7317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tutorialstuff/GLApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1956" column="12" selection-start-line="1956" selection-start-column="12" selection-end-line="1956" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#handleEvents#0;class#GLApp#0" expanded="false" />
-            <element signature="method#loadSettings#0;class#GLApp#0" expanded="false" />
-            <element signature="method#initDisplay#0;class#GLApp#0" expanded="false" />
-            <element signature="method#getDisplayMode#0;class#GLApp#0" expanded="false" />
-            <element signature="method#initInput#0;class#GLApp#0" expanded="false" />
-            <element signature="method#initGL#0;class#GLApp#0" expanded="false" />
-            <element signature="e#24837#24838#0" expanded="false" />
-            <element signature="e#24861#24862#0" expanded="false" />
-            <element signature="method#render#0;class#GLApp#0" expanded="false" />
-            <element signature="method#cleanup#0;class#GLApp#0" expanded="false" />
-            <element signature="e#26442#26443#0" expanded="false" />
-            <element signature="e#26473#26474#0" expanded="false" />
-            <element signature="e#27309#27310#0" expanded="false" />
-            <element signature="e#27363#27364#0" expanded="false" />
-            <element signature="e#28164#28165#0" expanded="false" />
-            <element signature="e#28215#28216#0" expanded="false" />
-            <element signature="e#30398#30399#0" expanded="false" />
-            <element signature="e#30455#30456#0" expanded="false" />
-            <element signature="e#30923#30924#0" expanded="false" />
-            <element signature="e#30955#30956#0" expanded="false" />
-            <element signature="e#31426#31427#0" expanded="false" />
-            <element signature="e#31458#31459#0" expanded="false" />
-            <element signature="e#31654#31655#0" expanded="false" />
-            <element signature="e#31689#31690#0" expanded="false" />
-            <element signature="e#31888#31889#0" expanded="false" />
-            <element signature="e#31924#31925#0" expanded="false" />
-            <element signature="e#32453#32454#0" expanded="false" />
-            <element signature="e#32495#32496#0" expanded="false" />
-            <element signature="e#41380#41381#0" expanded="false" />
-            <element signature="e#41448#41449#0" expanded="false" />
-            <element signature="e#63502#63503#0" expanded="false" />
-            <element signature="e#63561#63562#0" expanded="false" />
-            <element signature="e#64974#64975#0" expanded="false" />
-            <element signature="e#65032#65033#0" expanded="false" />
-            <element signature="e#65245#65246#0" expanded="false" />
-            <element signature="e#65294#65295#0" expanded="false" />
-            <element signature="e#66312#66313#0" expanded="false" />
-            <element signature="e#66367#66368#0" expanded="false" />
-            <element signature="e#66549#66550#0" expanded="false" />
-            <element signature="e#66583#66584#0" expanded="false" />
-            <element signature="e#78410#78411#0" expanded="false" />
-            <element signature="e#78448#78449#0" expanded="false" />
-            <element signature="e#78628#78629#0" expanded="false" />
-            <element signature="e#78669#78670#0" expanded="false" />
-            <element signature="e#91161#91162#0" expanded="false" />
-            <element signature="e#91247#91248#0" expanded="false" />
-            <element signature="e#92813#92814#0" expanded="false" />
-            <element signature="e#92850#92851#0" expanded="false" />
-            <element signature="e#93179#93180#0" expanded="false" />
-            <element signature="e#93219#93220#0" expanded="false" />
-            <element signature="e#95557#95558#0" expanded="false" />
-            <element signature="e#95585#95586#0" expanded="false" />
-            <element signature="e#104791#104792#0" expanded="false" />
-            <element signature="e#104847#104848#0" expanded="false" />
-            <element signature="e#110451#110452#0" expanded="false" />
-            <element signature="e#110483#110484#0" expanded="false" />
-            <element signature="e#111284#111285#0" expanded="false" />
-            <element signature="e#111323#111324#0" expanded="false" />
-            <element signature="e#111657#111658#0" expanded="false" />
-            <element signature="e#111721#111722#0" expanded="false" />
-            <element signature="e#117409#117410#0" expanded="false" />
-            <element signature="e#117441#117442#0" expanded="false" />
-            <element signature="e#129094#129095#0" expanded="false" />
-            <element signature="e#129150#129151#0" expanded="false" />
-            <element signature="e#131087#131088#0" expanded="false" />
-            <element signature="e#131139#131140#0" expanded="false" />
-            <element signature="e#133603#133604#0" expanded="false" />
-            <element signature="e#133635#133636#0" expanded="false" />
-            <element signature="e#133938#133939#0" expanded="false" />
-            <element signature="e#133984#133985#0" expanded="false" />
-            <element signature="e#134143#134144#0" expanded="false" />
-            <element signature="e#134186#134187#0" expanded="false" />
-            <element signature="e#137262#137263#0" expanded="false" />
-            <element signature="e#137323#137324#0" expanded="false" />
-            <element signature="e#137583#137584#0" expanded="false" />
-            <element signature="e#137630#137631#0" expanded="false" />
-            <element signature="e#144683#144684#0" expanded="false" />
-            <element signature="e#144726#144727#0" expanded="false" />
-            <element signature="e#145692#145693#0" expanded="false" />
-            <element signature="e#145735#145736#0" expanded="false" />
-            <element signature="e#145899#145900#0" expanded="false" />
-            <element signature="e#145963#145964#0" expanded="false" />
-            <element signature="e#146116#146117#0" expanded="false" />
-            <element signature="e#146178#146179#0" expanded="false" />
-            <element signature="e#146281#146282#0" expanded="false" />
-            <element signature="e#146317#146318#0" expanded="false" />
-            <element signature="e#147380#147381#0" expanded="false" />
-            <element signature="e#147420#147421#0" expanded="false" />
-            <element signature="e#148864#148865#0" expanded="false" />
-            <element signature="e#148910#148911#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1517,68 +1332,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver.java">
+    <entry file="file://$PROJECT_DIR$/src/tutorialstuff/GLApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+        <state relative-caret-position="213">
+          <caret line="1660" column="23" selection-start-line="1660" selection-start-column="23" selection-end-line="1660" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
-            <element signature="method#drawLine#0;class#main#0" expanded="false" />
-            <element signature="method#calculateNormals#0;class#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shapes/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="e#1749#1750#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
-            <element signature="e#1857#1858#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
+            <element signature="method#handleEvents#0;class#GLApp#0" expanded="false" />
+            <element signature="method#loadSettings#0;class#GLApp#0" expanded="false" />
+            <element signature="method#initDisplay#0;class#GLApp#0" expanded="false" />
+            <element signature="method#getDisplayMode#0;class#GLApp#0" expanded="false" />
+            <element signature="method#initInput#0;class#GLApp#0" expanded="false" />
+            <element signature="method#initGL#0;class#GLApp#0" expanded="false" />
+            <element signature="method#render#0;class#GLApp#0" expanded="false" />
+            <element signature="method#cleanup#0;class#GLApp#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tutorialstuff/LightingTest1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        <state relative-caret-position="305">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="57" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tutorialstuff/GLApp_DemoLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+          <folding>
+            <element signature="method#initDisplayTESTTEMP#0;class#GLApp_DemoLight#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shapes/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2626#2627#0" expanded="true" />
+            <element signature="e#2660#2661#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shapes/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        <state relative-caret-position="354">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
           <folding>
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shapes/Cube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+        <state relative-caret-position="257">
+          <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#maketexbuff#0;class#Cube#0" expanded="false" />
