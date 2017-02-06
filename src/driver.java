@@ -4,8 +4,8 @@
 public class driver {
 
     public static void main(String[] args)  {
-//        main r = new main();
-        rotarms r=new rotarms();
+        main r = new main();
+//        rotarms r=new rotarms();
         r.start();
     }
 

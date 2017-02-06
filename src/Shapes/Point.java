@@ -34,17 +34,17 @@ public class Point {
     }
     public boolean isPointOnRay(Point a, Point B)
     {
-        double d1,d2,d3,ans;
+        float d1,d2,d3,ans;
         d1=a.distance(B);
         d2=a.distance(this);
         d3=B.distance(this);
         ans=Math.abs((d1+d2)-d3);
         return ans<0.00001;//abs((d1+d2)-length)<# close to zero
     }
-    public double distance(Point a){
-        double px = a.x - this.x;
-        double py = a.y - this.y;
-        return Math.sqrt(px * px + py * py);
+    public float distance(Point a){
+        float px = a.x - this.x;
+        float py = a.y - this.y;
+        return (float)Math.sqrt(px * px + py * py);
     }
     public boolean compare(Point a){
         return a.x==x&&a.y==y&&a.z==z;
@@ -55,7 +55,13 @@ public class Point {
         this.y=y;
         this.z=z;
     }
-
+public Point sub(Point p){
+    return new Point(x-p.x,y-p.y,z-p.z);
+}
+    public void normalize(){
+        float v=distance(new Point(0,0,0));
+        setXYZ(x/v,y/v,z/v);
+    }
     @Override
     public String toString() {
         return "("+x+","+y+")";
