@@ -1,8 +1,9 @@
 
 
-import Shapes.Cube;
-import Shapes.Point;
-import Shapes.Polygon;
+import Utils.Cube;
+import Utils.Point;
+import Utils.Polygon;
+import Utils.Textureloader;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.Sys;
@@ -11,10 +12,10 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.util.glu.GLU;
-import org.lwjgl.util.glu.Sphere;
 
 
 import java.nio.FloatBuffer;
+import java.util.LinkedList;
 
 import static org.lwjgl.opengl.GL11.*;
 
@@ -23,8 +24,9 @@ public class main {
     long lastFrame;
     int fps;
     long lastFPS;
-    Cube c;Cube cc;
-    Polygon p;
+
+    LinkedList<Cube> walls;
+
     public void start() {
         try {
             Display.setDisplayMode(new DisplayMode(800, 600));
@@ -34,11 +36,22 @@ public class main {
             e.printStackTrace();
             System.exit(0);
         }
-
-        c=new Cube(2,3,0,1,1,1);
-        cc=new Cube(0,0,0,1,1,1);
-//        c.isWrieframe=true;
-//        cc.isWrieframe=true;
+        walls=new LinkedList<>();
+        String[] map={
+                "############" ,
+                "#------#---#" ,
+                "#------#---#" ,
+                "#------#-###" ,
+                "#----------#" ,
+                "#----------#" ,
+                "#----------#" ,
+                "############"};
+        for(int r=0;r<map.length;r++)
+            for(int c=0;c<map[0].length();c++){
+                if(map[r].charAt(c)=='#')
+                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f));
+                    walls.add(new Cube(r,0,c,.5f,.5f,.125f,"images\\marble_tile.jpg"));
+                }
 
         initGL();
         getDelta();
@@ -112,6 +125,7 @@ public class main {
         glEnableClientState(GL_VERTEX_ARRAY);
         glEnableClientState(GL_COLOR_ARRAY);
 
+        glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
 
@@ -128,6 +142,7 @@ public class main {
     double ticks =0;
     boolean tl=false;
 
+    boolean ffff=false;
     private void update(int delta) {
         initGL();
         updateFPS();
@@ -136,13 +151,21 @@ public class main {
         glClear(GL_COLOR_BUFFER_BIT
                 | GL_DEPTH_BUFFER_BIT);
 
-        cc.setOrigin(new Point(c.getOrigin().x+(float)(cos(ticks)*5),
-                c.getOrigin().y+(float)(sin(ticks)*5)
-                ,0));
-
-        c.draw();
-        cc.draw();
-        cc.rotate(1, 1, 1, 1);
+        for (Cube c:walls)
+            c.draw();
+        if(ticks%50==0)
+            ffff=!ffff;
+        Polygon.draw(new Point[]{
+                new Point(5,1,5),
+                new Point(5,0,5),
+                new Point(6,0,5),
+                new Point(6,1,5),
+        },new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
+        }, Textureloader.loadImage("images\\toaster.png",32,32,8,4,2)[1+((ffff)?0:4)]);
 
         drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
         drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
@@ -166,11 +189,9 @@ public class main {
     float dw=0.01f,dd=1;
     private void getInput(){
 
-        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){ c.translate(-1,0,0);dd+=0.5;}
-        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ c.translate(1,0,0);dd-=0.5;}
-        if (Keyboard.isKeyDown(Keyboard.KEY_UP)) c.rotate(1,0,1,1);
-        if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) c.rotate(-1,0,1,1);
-        dw+=(Mouse.getDWheel()/10000f);
+        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){ dd+=0.5;}
+        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ dd-=0.5;}
+        dw+=(Mouse.getDWheel()/100000f);
         dw=(dw<0)?0:dw;
         Camera.setSpeed(dw);
     }

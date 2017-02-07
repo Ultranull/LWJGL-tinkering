@@ -1,3 +1,7 @@
+import Utils.Textureloader;
+
+import java.awt.image.BufferedImage;
+
 /**
  * Created by usr on 11/20/2016.
  */

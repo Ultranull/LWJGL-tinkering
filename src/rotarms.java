@@ -1,7 +1,6 @@
 
 
-import Shapes.Cube;
-import Shapes.Point;
+import Utils.Point;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.Sys;

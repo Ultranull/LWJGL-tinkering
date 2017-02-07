@@ -1,4 +1,4 @@
-package Shapes;
+package Utils;
 
 /**
  * Created by usr on 11/14/2016.
@@ -19,18 +19,18 @@ public class Point {
         this.x=x;
         this.y=y;
         this.z=z;
-        this.r=0;
-        this.g=0;
-        this.b=0;
+        this.r=1;
+        this.g=1;
+        this.b=1;
     }
 
     public Point(){
         this.x=0;
         this.y=0;
         this.z=0;
-        this.r=0;
-        this.g=0;
-        this.b=0;
+        this.r=1;
+        this.g=1;
+        this.b=1;
     }
     public boolean isPointOnRay(Point a, Point B)
     {
