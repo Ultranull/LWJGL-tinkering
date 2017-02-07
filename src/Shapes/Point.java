@@ -59,6 +59,11 @@ public class Point {
         this.g=y;
         this.b=z;
     }
+    public void makep(){
+        x=Math.abs(x);
+        y=Math.abs(y);
+        z=Math.abs(z);
+    }
 public Point sub(Point p){
     return new Point(x-p.x,y-p.y,z-p.z);
 }

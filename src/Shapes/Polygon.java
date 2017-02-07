@@ -27,38 +27,39 @@ public class Polygon {
         normals=new Point[verts.length-2];
         for(int i=0;i<normals.length;i++){
             if(origin!=null)
-                normals[i]=Polygon.calcnormal(verts[i+2].sub(origin),verts[i+1].sub(origin),verts[0].sub(origin));
+                normals[i]=Polygon.calcnormal(verts[0].sub(origin),verts[i+1].sub(origin),verts[i+2].sub(origin));
             else
-                normals[i]=Polygon.calcnormal(verts[i+2],verts[i+1],verts[0]);
+                normals[i]=Polygon.calcnormal(verts[0],verts[i+1],verts[i+2]);
         }
 
     }
 
     public void draw(){
         glBegin(GL_POLYGON);
+        for(Point norm:normals)
+            glNormal3f(norm.x,norm.y,norm.z);
         for (Point vert : verts) {
             glColor3f(vert.r, vert.g, vert.b);
             glVertex3f(vert.x, vert.y, vert.z);
         }
-        for(Point norm:normals)
-            glNormal3f(norm.x,norm.y,norm.z);
         glEnd();
     }
     public static void draw(Point[] verts,boolean wire){
         Point[] normals=new Point[verts.length-2];
         for(int i=0;i<normals.length;i++){
-            normals[i]=Polygon.calcnormal(verts[i+2],verts[i+1],verts[0]);
+            normals[i]=Polygon.calcnormal(verts[0],verts[i+1],verts[i+2]);
         }
         if(wire)
             glBegin(GL_LINE_LOOP);
         else
             glBegin(GL_POLYGON);
+
+        for(Point norm:normals)
+            glNormal3f(norm.x,norm.y,norm.z);
         for (Point vert : verts) {
             glColor3f(vert.r, vert.g, vert.b);
             glVertex3f(vert.x, vert.y, vert.z);
         }
-        for(Point norm:normals)
-            glNormal3f(norm.x,norm.y,norm.z);
         glEnd();
     }
     public static Point calcnormal(Point A,Point B,Point C){
@@ -69,6 +70,7 @@ public class Polygon {
         surfaceNormal.y = (V1.z*V2.x) - (V1.x*V2.z);
         surfaceNormal.z = (V1.x*V2.y) - (V1.y*V2.x);
         surfaceNormal.normalize();
+        surfaceNormal.makep();
         return surfaceNormal;
     }
     public float[] getVerts(){
@@ -107,7 +109,6 @@ public class Polygon {
     public Point getOrigin() {
         return origin;
     }
-
     public void setOrigin(Point origin) {
         this.origin = origin;
     }

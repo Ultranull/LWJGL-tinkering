@@ -102,7 +102,6 @@ public class main {
     }
 
     private void initGL() {
-        glEnable(GL_TEXTURE_2D);
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClearDepth(1.0);
@@ -127,7 +126,7 @@ public class main {
 
 
     double ticks =0;
-    boolean tl=true;
+    boolean tl=false;
 
     private void update(int delta) {
         initGL();
@@ -142,23 +141,8 @@ public class main {
                 ,0));
 
         c.draw();
-        // cc.draw();
+        cc.draw();
         cc.rotate(1, 1, 1, 1);
-
-        glPushMatrix();
-        glTranslatef(0.0f, 7.0f, 0);
-        glColor3f(0.1f, 0.4f, 0.9f);
-        Sphere s = new Sphere();
-        s.draw(.5f, 20, 16);
-        glPopMatrix();
-
-        Point A=new Point(1,0,0,1,0,0);
-        Point B=new Point(0,0,1,0,1,0);
-        Point C=new Point(-1,0,0,0,0,1);
-        Point N=Polygon.calcnormal(C,B,A);
-        Polygon.draw(new Point[]{N,
-                C,B,A
-        },false);
 
         drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
         drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
