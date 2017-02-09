@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Cube.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Textureloader.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Cube.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Point.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Shapes/Polygon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Shapes/Cube.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shapes/Point.java" afterPath="$PROJECT_DIR$/src/Utils/Point.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shapes/Polygon.java" afterPath="$PROJECT_DIR$/src/Utils/Polygon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Sprite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" afterPath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/rotarms.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/rotarms.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/driver.java" afterPath="$PROJECT_DIR$/src/driver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Camera.java" afterPath="$PROJECT_DIR$/src/Camera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Cube.java" afterPath="$PROJECT_DIR$/src/Utils/Cube.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Polygon.java" afterPath="$PROJECT_DIR$/src/Utils/Polygon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Textureloader.java" afterPath="$PROJECT_DIR$/src/Utils/Textureloader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rotarms.java" afterPath="$PROJECT_DIR$/src/rotarms.java" />
     </list>
     <ignored path="3Dshapes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,25 +37,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+            <state relative-caret-position="596">
+              <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#draw#1;class#Polygon#0" expanded="false" />
-                <element signature="method#calcnormal#0;class#Polygon#0" expanded="false" />
                 <element signature="method#getVerts#0;class#Polygon#0" expanded="false" />
                 <element signature="method#getColors#0;class#Polygon#0" expanded="false" />
                 <element signature="method#getNormals#0;class#Polygon#0" expanded="false" />
@@ -70,17 +53,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main.java">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initLight#0;class#main#0" expanded="false" />
-                <marker date="1486451352381" expanded="false" signature="3832:4475" placeholder="{...}" />
-                <marker date="1486451352381" expanded="false" signature="5554:5661" placeholder="{...}" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,8 +66,8 @@
       <file leaf-file-name="Textureloader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Textureloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-570">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,15 +90,46 @@
       <file leaf-file-name="Cube.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Cube.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+            <state relative-caret-position="-2132">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#vertInit#0;class#Cube#0" expanded="false" />
-                <element signature="method#makecolorbuff#0;class#Cube#0" expanded="false" />
-                <element signature="method#makevertbuff#0;class#Cube#0" expanded="false" />
-                <element signature="method#makenormbuff#0;class#Cube#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initLight#0;class#main#0" expanded="false" />
+                <element signature="method#initGL#0;class#main#0" expanded="false" />
+                <element signature="method#drawLine#0;class#main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sprite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,10 +173,12 @@
         <option value="$PROJECT_DIR$/src/Textureloader.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Textureloader.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Cube.java" />
-        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
         <option value="$PROJECT_DIR$/src/driver.java" />
-        <option value="$PROJECT_DIR$/src/Utils/Textureloader.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/Camera.java" />
         <option value="$PROJECT_DIR$/src/Utils/Polygon.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Textureloader.java" />
         <option value="$PROJECT_DIR$/src/Utils/Cube.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
       </list>
@@ -338,56 +349,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
@@ -397,13 +359,13 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/usr/IdeaProjects/3Dshapes/src/Armsinput.form" />
-    <property name="last_opened_file_path" value="C:/Apps/cmder/vendor/git-for-windows/bin/git.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/projects/shipgame" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="169" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="207" />
@@ -952,7 +914,7 @@
       <workItem from="1484694162243" duration="2616000" />
       <workItem from="1484846617709" duration="10078000" />
       <workItem from="1485830480348" duration="7063000" />
-      <workItem from="1486056282688" duration="58671000" />
+      <workItem from="1486056282688" duration="71294000" />
     </task>
     <task id="LOCAL-00001" summary="boop">
       <created>1484508841802</created>
@@ -982,11 +944,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486431943307</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="progress">
+      <created>1486451621116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1486451621116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135062000" />
+    <option name="totallyTimeSpent" value="147685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1008,12 +977,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33076075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06615215" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.150108" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31954023" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1028,6 +997,34 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1323043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32745314" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06615215" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.150108" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892008" sideWeight="0.50567263" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1045,7 +1042,8 @@
     <MESSAGE value="just some major improvements" />
     <MESSAGE value="the normals are broken and i dont know why" />
     <MESSAGE value="textures work but normals still dont [ITS WOLFENSTIEN TIME!]" />
-    <option name="LAST_COMMIT_MESSAGE" value="textures work but normals still dont [ITS WOLFENSTIEN TIME!]" />
+    <MESSAGE value="progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1065,14 +1063,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Armsinput.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1095,8 +1085,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <marker date="1486451352381" expanded="false" signature="3832:4475" placeholder="{...}" />
-            <marker date="1486451352381" expanded="false" signature="5554:5661" placeholder="{...}" />
+            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,10 +1097,6 @@
           <caret line="160" column="19" selection-start-line="160" selection-start-column="19" selection-end-line="160" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#vertInit#0;class#Cube#0" expanded="false" />
-            <element signature="method#makecolorbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makevertbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makenormbuff#0;class#Cube#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1120,7 +1106,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1150,8 +1136,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <marker date="1486451352381" expanded="false" signature="3832:4475" placeholder="{...}" />
-            <marker date="1486451352381" expanded="false" signature="5554:5661" placeholder="{...}" />
+            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1162,10 +1148,6 @@
           <caret line="162" column="81" selection-start-line="162" selection-start-column="81" selection-end-line="162" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#vertInit#0;class#Cube#0" expanded="false" />
-            <element signature="method#makecolorbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makevertbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makenormbuff#0;class#Cube#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1175,7 +1157,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1217,8 +1199,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <marker date="1486451352381" expanded="false" signature="3832:4475" placeholder="{...}" />
-            <marker date="1486451352381" expanded="false" signature="5554:5661" placeholder="{...}" />
+            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1229,10 +1211,6 @@
           <caret line="148" column="50" selection-start-line="148" selection-start-column="19" selection-end-line="148" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#vertInit#0;class#Cube#0" expanded="false" />
-            <element signature="method#makecolorbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makevertbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makenormbuff#0;class#Cube#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1242,7 +1220,7 @@
         <state relative-caret-position="2596">
           <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1377,7 +1355,7 @@
         <state relative-caret-position="-2071">
           <caret line="175" column="32" selection-start-line="175" selection-start-column="32" selection-end-line="175" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1448,47 +1426,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="29">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="332">
+          <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Polygon.java">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Textureloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#1;class#Polygon#0" expanded="false" />
-            <element signature="method#calcnormal#0;class#Polygon#0" expanded="false" />
-            <element signature="method#getVerts#0;class#Polygon#0" expanded="false" />
-            <element signature="method#getColors#0;class#Polygon#0" expanded="false" />
-            <element signature="method#getNormals#0;class#Polygon#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Cube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#vertInit#0;class#Cube#0" expanded="false" />
-            <element signature="method#makecolorbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makevertbuff#0;class#Cube#0" expanded="false" />
-            <element signature="method#makenormbuff#0;class#Cube#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1503,10 +1462,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Textureloader.java">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#draw#1;class#Polygon#0" expanded="false" />
+            <element signature="method#getVerts#0;class#Polygon#0" expanded="false" />
+            <element signature="method#getColors#0;class#Polygon#0" expanded="false" />
+            <element signature="method#getNormals#0;class#Polygon#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2132">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1515,13 +1496,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
+        <state relative-caret-position="266">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <marker date="1486451352381" expanded="false" signature="3832:4475" placeholder="{...}" />
-            <marker date="1486451352381" expanded="false" signature="5554:5661" placeholder="{...}" />
+            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1535,8 +1516,8 @@
             <show-sorted>false</show-sorted>
             <show-content>
               <type id="artifact" />
-              <type id="jpa-descriptors" />
               <type id="library" />
+              <type id="jpa-descriptors" />
               <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
@@ -1589,7 +1570,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>3Dshapes</last-edited>
+          <last-edited>LWJGL-tinkering</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

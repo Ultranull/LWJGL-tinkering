@@ -43,24 +43,24 @@ public class Cube {
 
     public boolean isWrieframe = false;
 
-    public Cube(float x, float y, float z) {
+    public Cube(float x, float y, float z,int id) {
         origin = new Point(x, y, z);
         l = 1;
         w = 1;
         h = 1;
         vertInit();
 
-        VBOTexID = loadTexture(loadImage("images\\brick.jpg"));
+        VBOTexID = id;
     }
 
-    public Cube(float x, float y, float z, float L, float W, float H) {
+    public Cube(float x, float y, float z, float L, float W, float H,int id) {
         origin = new Point(x, y, z);
         l = L;
         w = W;
         h = H;
         vertInit();
 
-        VBOTexID = loadTexture(loadImage("images\\brick.jpg"));
+        VBOTexID = id;
     }
     public Cube(float x, float y, float z,String loc) {
         origin = new Point(x, y, z);

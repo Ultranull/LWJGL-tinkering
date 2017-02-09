@@ -67,6 +67,10 @@ public class Camera {
         boolean keyDown = Keyboard.isKeyDown(Keyboard.KEY_S);
         boolean keyRight = Keyboard.isKeyDown(Keyboard.KEY_D);
         boolean keyLeft = Keyboard.isKeyDown(Keyboard.KEY_A);
+
+        boolean keyE = Keyboard.isKeyDown(Keyboard.KEY_E);
+        boolean keyQ = Keyboard.isKeyDown(Keyboard.KEY_Q);
+
         boolean keyFast = Keyboard.isKeyDown(Keyboard.KEY_Q);
         boolean keySlow = Keyboard.isKeyDown(Keyboard.KEY_E);
         boolean keyFlyUp = Keyboard.isKeyDown(Keyboard.KEY_SPACE);
@@ -94,19 +98,25 @@ public class Camera {
             pos.y -= speed;
         }
 
+
+        if(keyLeft)
+            rotation.y -= mouseSensitivity * delta*15;
+        if(keyRight)
+            rotation.y += mouseSensitivity * delta*15;
+
         if(keyDown) {
-            pos.x -= Math.sin(Math.toRadians(rotation.y)) * speed;
-            pos.z += Math.cos(Math.toRadians(rotation.y)) * speed;
+            pos.x -= Math.sin(Math.toRadians(rotation.y)) * speed/5d;
+            pos.z += Math.cos(Math.toRadians(rotation.y)) * speed/5d;
         }
         if(keyUp) {
-            pos.x += Math.sin(Math.toRadians(rotation.y)) * speed;
-            pos.z -= Math.cos(Math.toRadians(rotation.y)) * speed;
+            pos.x += Math.sin(Math.toRadians(rotation.y)) * speed/5d;
+            pos.z -= Math.cos(Math.toRadians(rotation.y)) * speed/5d;
         }
-        if(keyLeft) {
-            pos.x += Math.sin(Math.toRadians(rotation.y - 90)) * speed;
-            pos.z -= Math.cos(Math.toRadians(rotation.y - 90)) * speed;
+        if(keyQ) {
+            pos.x += Math.sin(Math.toRadians(rotation.y - 90)) * speed/20d;
+            pos.z -= Math.cos(Math.toRadians(rotation.y - 90)) * speed/20d;
         }
-        if(keyRight) {
+        if(keyE) {
             pos.x += Math.sin(Math.toRadians(rotation.y + 90)) * speed;
             pos.z -= Math.cos(Math.toRadians(rotation.y + 90)) * speed;
         }

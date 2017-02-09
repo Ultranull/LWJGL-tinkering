@@ -95,7 +95,27 @@ public class Polygon {
         glDisable(GL_TEXTURE_2D);
         glDisable (GL_BLEND);
     }
-
+    public static void draw(Point[] verts,Point[] texture, int texid){
+        Point[] normals=new Point[verts.length-2];
+        for(int i=0;i<normals.length;i++){
+            normals[i]=Polygon.calcnormal(verts[0],verts[i+1],verts[i+2]);
+        }
+        glBindTexture(GL_TEXTURE_2D,texid);
+        glEnable(GL_TEXTURE_2D);
+        glEnable (GL_BLEND);
+        glBegin(GL_POLYGON);
+        glColor3f(1,1,1);
+        for(Point norm:normals)
+            glNormal3f(norm.x,norm.y,norm.z);
+        for (int i = 0; i < verts.length; i++) {
+            Point vert = verts[i];
+            glTexCoord2f(texture[i].x,texture[i].y);
+            glVertex3f(vert.x, vert.y, vert.z);
+        }
+        glEnd();
+        glDisable(GL_TEXTURE_2D);
+        glDisable (GL_BLEND);
+    }
     public void HasTex(Point[] texvert, BufferedImage tex){
         hasTex=true;
         texture=texvert;

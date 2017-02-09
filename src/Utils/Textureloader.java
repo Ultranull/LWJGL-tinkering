@@ -64,7 +64,7 @@ public class Textureloader {
         try {
             return ImageIO.read(new File(System.getProperty("user.dir")+"/"+loc));
         } catch (IOException e) {
-            System.out.println("IMAGE INCORRECTLY LOADED!!!");
+            System.out.println(loc+": IMAGE INCORRECTLY LOADED!!!");
             System.exit(-1);
         }
         return null;
@@ -74,7 +74,7 @@ public class Textureloader {
         try {
             image= ImageIO.read(new File(System.getProperty("user.dir")+"/"+loc));
         } catch (IOException e) {
-            System.out.println("IMAGE INCORRECTLY LOADED!!!");
+            System.out.println(loc+": IMAGE INCORRECTLY LOADED!!!");
             System.exit(-1);
         }
         BufferedImage[] ans=new BufferedImage[not];

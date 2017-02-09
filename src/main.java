@@ -1,9 +1,6 @@
 
 
-import Utils.Cube;
-import Utils.Point;
-import Utils.Polygon;
-import Utils.Textureloader;
+import Utils.*;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.Sys;
@@ -12,8 +9,9 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.util.glu.GLU;
+import org.lwjgl.util.vector.Vector3f;
 
-
+import javax.swing.*;
 import java.nio.FloatBuffer;
 import java.util.LinkedList;
 
@@ -25,9 +23,22 @@ public class main {
     int fps;
     long lastFPS;
 
+    int[] skyboxid=new int[6];
     LinkedList<Cube> walls;
-
+    Point cen;
     public void start() {
+
+        JProgressBar p=new JProgressBar(0,100);
+        p.setValue(0);
+        p.setStringPainted(true);
+        JPanel panel=new JPanel();
+        panel.add(p);
+        JFrame frame=new JFrame("loading");
+        frame.setContentPane(panel);
+        frame.setSize(30,50+50);
+        frame.setVisible(true);
+        frame.setLocation(300,300);
+
         try {
             Display.setDisplayMode(new DisplayMode(800, 600));
             Display.create();
@@ -36,6 +47,15 @@ public class main {
             e.printStackTrace();
             System.exit(0);
         }
+        p.setValue(10);
+        skyboxid[0]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_pos_z.png"));
+        skyboxid[1]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_neg_z.png"));
+        skyboxid[2]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_pos_x.png"));
+        skyboxid[3]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_neg_x.png"));
+        int bricktex=Textureloader.loadTexture(Textureloader.loadImage("images\\brick.jpg"));
+        int tiletex=Textureloader.loadTexture(Textureloader.loadImage("images\\marble_tile.jpg"));
+
+        p.setValue(20);
         walls=new LinkedList<>();
         String[] map={
                 "############" ,
@@ -46,23 +66,30 @@ public class main {
                 "#----------#" ,
                 "#----------#" ,
                 "############"};
+        cen=new Point(map.length/2,0,map[0].length()/2);
         for(int r=0;r<map.length;r++)
             for(int c=0;c<map[0].length();c++){
                 if(map[r].charAt(c)=='#')
-                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f));
-                    walls.add(new Cube(r,0,c,.5f,.5f,.125f,"images\\marble_tile.jpg"));
-                }
+                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f,bricktex));
+                walls.add(new Cube(r,0,c,.5f,.5f,.125f,tiletex));
+            }
 
+        p.setValue(30);
         initGL();
         getDelta();
         lastFPS = getTime();
 
         Camera.create();
+        Camera.setPos(new Vector3f(3,.5f,3));
+        Camera.apply();
+
+        p.setValue(100);
+        frame.dispose();
         while (!Display.isCloseRequested()) {
             int delta = getDelta();
 
-            Camera.apply();
             Camera.acceptInput(delta);
+            Camera.apply();
 
             update(delta);
 
@@ -139,10 +166,9 @@ public class main {
     }
 
 
-    double ticks =0;
+    int ticks =0;
     boolean tl=false;
 
-    boolean ffff=false;
     private void update(int delta) {
         initGL();
         updateFPS();
@@ -151,25 +177,17 @@ public class main {
         glClear(GL_COLOR_BUFFER_BIT
                 | GL_DEPTH_BUFFER_BIT);
 
+
+        drawskybox();
         for (Cube c:walls)
             c.draw();
-        if(ticks%50==0)
-            ffff=!ffff;
-        Polygon.draw(new Point[]{
-                new Point(5,1,5),
-                new Point(5,0,5),
-                new Point(6,0,5),
-                new Point(6,1,5),
-        },new Point[]{
-                new Point(0,0,0),
-                new Point(0,1,0),
-                new Point(1,1,0),
-                new Point(1,0,0),
-        }, Textureloader.loadImage("images\\toaster.png",32,32,8,4,2)[1+((ffff)?0:4)]);
+        Sprite.draw(Camera.getRotationX(),Camera.getRotationY(),Camera.getRotationZ(),ticks);
 
         drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
         drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
         drawLine(new Point(50, 0, 0, 1, 0, 0), new Point(-50, 0, 0, 1, 0, 0));
+
+
 
         ticks +=1;
     }
@@ -180,7 +198,62 @@ public class main {
         glEnd();
     }
 
+private void drawskybox(){
+int size=40;
+    glPushMatrix();
+    glTranslatef(cen.x,-size/2,cen.z-size/2);
+    Polygon.draw(new Point[]{
+            new Point(size/2,size,0),
+            new Point(size/2,0,0),
+            new Point(-size/2,0,0),
+            new Point(-size/2,size,0),
+    },new Point[]{
+            new Point(0,0,0),
+            new Point(0,1,0),
+            new Point(1,1,0),
+            new Point(1,0,0),
 
+    },skyboxid[0]);
+    Polygon.draw(new Point[]{
+            new Point(-size/2,size,size),
+            new Point(-size/2,0,size),
+            new Point(size/2,0,size),
+            new Point(size/2,size,size),
+    },new Point[]{
+            new Point(0,0,0),
+            new Point(0,1,0),
+            new Point(1,1,0),
+            new Point(1,0,0),
+
+    },skyboxid[1]);
+    Polygon.draw(new Point[]{
+            new Point(size/2,size,size),
+            new Point(size/2,0,size),
+            new Point(size/2,0,0),
+            new Point(size/2,size,0),
+    },new Point[]{
+            new Point(0,0,0),
+            new Point(0,1,0),
+            new Point(1,1,0),
+            new Point(1,0,0),
+
+    },skyboxid[3]);
+    Polygon.draw(new Point[]{
+            new Point(-size/2,size,0),
+            new Point(-size/2,0,0),
+            new Point(-size/2,0,size),
+            new Point(-size/2,size,size),
+    },new Point[]{
+            new Point(0,0,0),
+            new Point(0,1,0),
+            new Point(1,1,0),
+            new Point(1,0,0),
+
+    },skyboxid[2]);
+
+    glPopMatrix();
+
+}
     private void pointset(Point point){
         glColor3f(point.r,point.g,point.b);
         glVertex3f(point.x, point.y,point.z);
