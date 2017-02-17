@@ -32,8 +32,19 @@ public class Point {
         this.g=1;
         this.b=1;
     }
-    public boolean isPointOnRay(Point a, Point B)
-    {
+    public Point findOnLine(Point b,float dist){
+        float dt=distance(b);
+        float t=dist/dt;
+        return new Point(
+                (1-t)*x+t*b.x,
+                (1-t)*y+t*b.y,
+                (1-t)*z+t*b.z
+        );
+    }
+    public Point midpoint(Point B){
+        return new Point((x+B.x)/2,(y+B.y)/2,(z+B.z)/2);//,(r+B.r)/2,(g+B.g)/2,(b+B.b)/2);
+    }
+    public boolean isPointOnRay(Point a, Point B) {
         float d1,d2,d3,ans;
         d1=a.distance(B);
         d2=a.distance(this);
@@ -44,12 +55,12 @@ public class Point {
     public float distance(Point a){
         float px = a.x - this.x;
         float py = a.y - this.y;
-        return (float)Math.sqrt(px * px + py * py);
+        float pz = a.z - this.z;
+        return (float)Math.sqrt(px * px + py * py + pz * pz);
     }
     public boolean compare(Point a){
         return a.x==x&&a.y==y&&a.z==z;
     }
-
     public void setXYZ(float x,float y,float z){
         this.x=x;
         this.y=y;
@@ -64,19 +75,22 @@ public class Point {
         y=Math.abs(y);
         z=Math.abs(z);
     }
-public Point sub(Point p){
-    return new Point(x-p.x,y-p.y,z-p.z);
-}
-public Point sum(Point p){
-    return new Point(x+p.x,y+p.y,z+p.z);
-}
+    public Point div(Point B,float d){
+        return new Point((x+B.x)/d,(y+B.y)/d,(z+B.z)/d);
+    }
+    public Point sub(Point p){
+        return new Point(x-p.x,y-p.y,z-p.z);
+    }
+    public Point sum(Point p){
+        return new Point(x+p.x,y+p.y,z+p.z);
+    }
     public void normalize(){
         float v=(float) Math.sqrt(x*x+y*y+z*z);
         setXYZ(x/v,y/v,z/v);
     }
     @Override
     public String toString() {
-        return "("+x+","+y+")";
+        return "("+x+","+y+","+z+")";
     }
 
 }

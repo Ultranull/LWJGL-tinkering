@@ -6,9 +6,11 @@ import org.lwjgl.opengl.GL12;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.ByteBuffer;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -35,32 +37,25 @@ public class Textureloader {
             }
         }
 
-        buffer.flip(); //FOR THE LOVE OF GOD DO NOT FORGET THIS
-
-        // You now have a ByteBuffer filled with the color data of each pixel.
-        // Now just create a texture ID and bind it. Then you can load it using
-        // whatever OpenGL method you want, for example:
-
-        int textureID = glGenTextures(); //Generate texture ID
-        glBindTexture(GL_TEXTURE_2D, textureID); //Bind texture ID
-
-        //Setup wrap mode
+        buffer.flip();
+        int textureID = glGenTextures();
+        glBindTexture(GL_TEXTURE_2D, textureID);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL12.GL_CLAMP_TO_EDGE);
-
-        //Setup texture scaling filtering
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
-        //Send texel data to OpenGL
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth(), image.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
-
-        //Return the texture ID so we can bind it later again
         return textureID;
     }
+    public static int[] loadTexture(BufferedImage[] image){
+        int[] ans=new int[image.length];
+        int i=0;
+        for(BufferedImage b:image)
+        ans[i++]=loadTexture(b);
+        return ans;
+    }
 
-    public static BufferedImage loadImage(String loc)
-    {
+    public static BufferedImage loadImage(String loc) {
         try {
             return ImageIO.read(new File(System.getProperty("user.dir")+"/"+loc));
         } catch (IOException e) {

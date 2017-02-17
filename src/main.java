@@ -9,10 +9,21 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.util.glu.GLU;
+import org.lwjgl.util.vector.Matrix;
 import org.lwjgl.util.vector.Vector3f;
+import sun.awt.image.ImageWatched;
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import static org.lwjgl.opengl.GL20.*;
+
 
 import javax.swing.*;
 import java.nio.FloatBuffer;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -23,9 +34,11 @@ public class main {
     int fps;
     long lastFPS;
 
-    int[] skyboxid=new int[6];
     LinkedList<Cube> walls;
     Point cen;
+    Polygon gui;
+    Sprite toaster;
+
     public void start() {
 
         JProgressBar p=new JProgressBar(0,100);
@@ -47,15 +60,24 @@ public class main {
             e.printStackTrace();
             System.exit(0);
         }
-        p.setValue(10);
-        skyboxid[0]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_pos_z.png"));
-        skyboxid[1]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_neg_z.png"));
-        skyboxid[2]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_pos_x.png"));
-        skyboxid[3]=Textureloader.loadTexture(Textureloader.loadImage("images\\sky_neg_x.png"));
-        int bricktex=Textureloader.loadTexture(Textureloader.loadImage("images\\brick.jpg"));
-        int tiletex=Textureloader.loadTexture(Textureloader.loadImage("images\\marble_tile.jpg"));
 
-        p.setValue(20);
+
+        Material.init(new String[]{
+                "skypz","images\\sky_pos_z.png",
+                "skynz","images\\sky_neg_z.png",
+                "skypx","images\\sky_pos_x.png",
+                "skynx","images\\sky_neg_x.png",
+                "brick","images\\brick.jpg",
+                "tile","images\\marble_tile.jpg",
+                "gui","images\\GUI.png",
+        });
+        toaster=new Sprite(Material.addMat("toaster","images\\toaster.png",32,32,8,4,2),new Point(5,0,5),4,5);
+        toaster.setPath(new Path(new Point[]{
+                new Point(5,0,5),
+                new Point(4,0,5),
+                new Point(4,0,4),
+                new Point(5,0,4),
+        },true));
         walls=new LinkedList<>();
         String[] map={
                 "############" ,
@@ -70,11 +92,28 @@ public class main {
         for(int r=0;r<map.length;r++)
             for(int c=0;c<map[0].length();c++){
                 if(map[r].charAt(c)=='#')
-                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f,bricktex));
-                walls.add(new Cube(r,0,c,.5f,.5f,.125f,tiletex));
+                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f,Material.get("brick")));
+                walls.add(new Cube(r,0,c,.5f,.5f,.125f,Material.get("tile")));
             }
 
-        p.setValue(30);
+
+        gui=new Polygon(new Point[]{
+                new Point(0,1,0),
+                new Point(0,0,0),
+                new Point(1,0,0),
+                new Point(1,1,0),
+        },new Point(-.5f,-.5f,-1));
+        gui.HasTex(new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
+
+        },Material.get("gui"));
+
+        p.setValue(96);
+
+
         initGL();
         getDelta();
         lastFPS = getTime();
@@ -103,7 +142,6 @@ public class main {
 
         Display.destroy();
     }
-
 
     private void initLight(){
         glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -140,7 +178,6 @@ public class main {
         glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);			// tell opengl glColor3f effects the ambient and diffuse properties of material
         //----------- END: Variables & method calls added for Lighting Test -----------//
     }
-
     private void initGL() {
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -158,17 +195,14 @@ public class main {
 
         GLU.gluPerspective(45f, (float) Display.getWidth()
                 / (float) Display.getHeight(), 0.1f, 800f);
-        //glTranslatef(0f, 0f, -50f);
+//        glTranslatef(0f, 0f, -50f);
         glMatrixMode(GL_MODELVIEW);
         if(tl)
             initLight();
 
     }
-
-
     int ticks =0;
     boolean tl=false;
-
     private void update(int delta) {
         initGL();
         updateFPS();
@@ -178,92 +212,116 @@ public class main {
                 | GL_DEPTH_BUFFER_BIT);
 
 
+
         drawskybox();
         for (Cube c:walls)
             c.draw();
-        Sprite.draw(Camera.getRotationX(),Camera.getRotationY(),Camera.getRotationZ(),ticks);
 
-        drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
-        drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
-        drawLine(new Point(50, 0, 0, 1, 0, 0), new Point(-50, 0, 0, 1, 0, 0));
+        toaster.draw(Camera.getRotationX(),Camera.getRotationY(),Camera.getRotationZ(),ticks);
 
+        glPushMatrix();
+        glDisable(GL_DEPTH_TEST);
+        glTranslatef(Camera.getX(),Camera.getY(),Camera.getZ());
+        glRotatef(-Camera.getRotationX(),1,0,0);
+        glRotatef(-Camera.getRotationY(),0,1,0);
+        glRotatef(-Camera.getRotationZ(),0,0,1);
+        if(Camera.ismoving)
+            gui.setOrigin(gui.getOrigin().sum(new Point(0,cos(Camera.dm*10)/(float) Math.pow(2,9),0)));
+        gui.draw();
+        glEnable(GL_DEPTH_TEST);
+        glPopMatrix();
 
+//        drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
+//        drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
+//        drawLine(new Point(50, 0, 0, 1, 0, 0), new Point(-50, 0, 0, 1, 0, 0));
 
         ticks +=1;
     }
+
     private void drawLine(Point point, Point point2) {
         glBegin(GL_LINE_STRIP);
         pointset(point);
         pointset(point2);
         glEnd();
     }
+    private void drawLine(Point point, Point point2,float r,float g,float b) {
+        glBegin(GL_LINE_STRIP);
+        glColor3f(r,g,b);
+        glVertex3f(point.x, point.y,point.z);
+        glColor3f(r,g,b);
+        glVertex3f(point2.x, point2.y,point2.z);
+        glEnd();
+    }
+    private void drawskybox(){
+        int size=100;
+        glPushMatrix();
+        glTranslatef(cen.x,-size/2,cen.z-size/2);
+        Polygon.draw(new Point[]{
+                new Point(size/2,size,0),
+                new Point(size/2,0,0),
+                new Point(-size/2,0,0),
+                new Point(-size/2,size,0),
+        },new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
 
-private void drawskybox(){
-int size=40;
-    glPushMatrix();
-    glTranslatef(cen.x,-size/2,cen.z-size/2);
-    Polygon.draw(new Point[]{
-            new Point(size/2,size,0),
-            new Point(size/2,0,0),
-            new Point(-size/2,0,0),
-            new Point(-size/2,size,0),
-    },new Point[]{
-            new Point(0,0,0),
-            new Point(0,1,0),
-            new Point(1,1,0),
-            new Point(1,0,0),
+        }, Material.get("skynz"));
+        Polygon.draw(new Point[]{
+                new Point(-size/2,size,size),
+                new Point(-size/2,0,size),
+                new Point(size/2,0,size),
+                new Point(size/2,size,size),
+        },new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
 
-    },skyboxid[0]);
-    Polygon.draw(new Point[]{
-            new Point(-size/2,size,size),
-            new Point(-size/2,0,size),
-            new Point(size/2,0,size),
-            new Point(size/2,size,size),
-    },new Point[]{
-            new Point(0,0,0),
-            new Point(0,1,0),
-            new Point(1,1,0),
-            new Point(1,0,0),
+        },Material.get("skypz"));
+        Polygon.draw(new Point[]{
+                new Point(size/2,size,size),
+                new Point(size/2,0,size),
+                new Point(size/2,0,0),
+                new Point(size/2,size,0),
+        },new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
 
-    },skyboxid[1]);
-    Polygon.draw(new Point[]{
-            new Point(size/2,size,size),
-            new Point(size/2,0,size),
-            new Point(size/2,0,0),
-            new Point(size/2,size,0),
-    },new Point[]{
-            new Point(0,0,0),
-            new Point(0,1,0),
-            new Point(1,1,0),
-            new Point(1,0,0),
+        },Material.get("skypx"));
+        Polygon.draw(new Point[]{
+                new Point(-size/2,size,0),
+                new Point(-size/2,0,0),
+                new Point(-size/2,0,size),
+                new Point(-size/2,size,size),
+        },new Point[]{
+                new Point(0,0,0),
+                new Point(0,1,0),
+                new Point(1,1,0),
+                new Point(1,0,0),
 
-    },skyboxid[3]);
-    Polygon.draw(new Point[]{
-            new Point(-size/2,size,0),
-            new Point(-size/2,0,0),
-            new Point(-size/2,0,size),
-            new Point(-size/2,size,size),
-    },new Point[]{
-            new Point(0,0,0),
-            new Point(0,1,0),
-            new Point(1,1,0),
-            new Point(1,0,0),
+        },Material.get("skynx"));
+        glPopMatrix();
 
-    },skyboxid[2]);
-
-    glPopMatrix();
-
-}
+    }
     private void pointset(Point point){
         glColor3f(point.r,point.g,point.b);
         glVertex3f(point.x, point.y,point.z);
     }
 
-    float dw=0.01f,dd=1;
+    float dw=0.01f,dd=2,wd=0;
     private void getInput(){
+        if(Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)){
+            Display.destroy();
+            System.exit(0);
+        }
 
-        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){ dd+=0.5;}
-        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ dd-=0.5;}
+        if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){
+            dd+=0.01;}
+        if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ dd-=0.01;}
         dw+=(Mouse.getDWheel()/100000f);
         dw=(dw<0)?0:dw;
         Camera.setSpeed(dw);
@@ -287,11 +345,63 @@ int size=40;
         fps++;
     }
 
-    double sin(double a){return Math.sin(Math.toRadians(a));}
-    double cos(double a){return Math.cos(Math.toRadians(a));}
+    float sin(float a){return(float) Math.sin(Math.toRadians(a));}
+    float cos(float a){return(float) Math.cos(Math.toRadians(a));}
 
 
-
+    public static int loadShaderPair(String vertexShaderLocation, String fragmentShaderLocation) {
+        int shaderProgram = glCreateProgram();
+        int vertexShader = glCreateShader(GL_VERTEX_SHADER);
+        int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+        StringBuilder vertexShaderSource = new StringBuilder();
+        StringBuilder fragmentShaderSource = new StringBuilder();
+        BufferedReader vertexShaderFileReader = null;
+        try {
+            vertexShaderFileReader = new BufferedReader(new FileReader(vertexShaderLocation));
+            String line;
+            while ((line = vertexShaderFileReader.readLine()) != null) {
+                vertexShaderSource.append(line).append('\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return -1;
+        }
+        BufferedReader fragmentShaderFileReader = null;
+        try {
+            fragmentShaderFileReader = new BufferedReader(new FileReader(fragmentShaderLocation));
+            String line;
+            while ((line = fragmentShaderFileReader.readLine()) != null) {
+                fragmentShaderSource.append(line).append('\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return -1;
+        }
+        glShaderSource(vertexShader, vertexShaderSource);
+        glCompileShader(vertexShader);
+        if (glGetShaderi(vertexShader, GL_COMPILE_STATUS) == GL_FALSE) {
+            System.err.println("Vertex shader wasn't able to be compiled correctly. Error log:");
+            System.err.println(glGetShaderInfoLog(vertexShader, 1024));
+            return -1;
+        }
+        glShaderSource(fragmentShader, fragmentShaderSource);
+        glCompileShader(fragmentShader);
+        if (glGetShaderi(fragmentShader, GL_COMPILE_STATUS) == GL_FALSE) {
+            System.err.println("Fragment shader wasn't able to be compiled correctly. Error log:");
+            System.err.println(glGetShaderInfoLog(fragmentShader, 1024));
+        }
+        glAttachShader(shaderProgram, vertexShader);
+        glAttachShader(shaderProgram, fragmentShader);
+        glLinkProgram(shaderProgram);
+        if (glGetProgrami(shaderProgram, GL_LINK_STATUS) == GL_FALSE) {
+            System.err.println("Shader program wasn't linked correctly.");
+            System.err.println(glGetProgramInfoLog(shaderProgram, 1024));
+            return -1;
+        }
+        glDeleteShader(vertexShader);
+        glDeleteShader(fragmentShader);
+        return shaderProgram;
+    }
 
 
 }

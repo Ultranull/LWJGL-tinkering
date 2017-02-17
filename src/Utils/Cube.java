@@ -52,7 +52,6 @@ public class Cube {
 
         VBOTexID = id;
     }
-
     public Cube(float x, float y, float z, float L, float W, float H,int id) {
         origin = new Point(x, y, z);
         l = L;
@@ -71,7 +70,6 @@ public class Cube {
 
         VBOTexID = loadTexture(loadImage(loc));
     }
-
     public Cube(float x, float y, float z, float L, float W, float H,String loc) {
         origin = new Point(x, y, z);
         l = L;
@@ -94,14 +92,14 @@ public class Cube {
  *
  */
     private void vertInit() {
-        Point A = new Point(origin.x - w, origin.y + h, origin.z + l, 1, 1, 1);
-        Point B = new Point(origin.x + w, origin.y + h, origin.z + l, 1, 1, 1);
-        Point C = new Point(origin.x - w, origin.y - h, origin.z + l, 1, 1, 1);
-        Point D = new Point(origin.x + w, origin.y - h, origin.z + l, 1, 1, 1);
-        Point E = new Point(origin.x - w, origin.y + h, origin.z - l, 1, 1, 1);
-        Point F = new Point(origin.x + w, origin.y + h, origin.z - l, 1, 1, 1);
-        Point G = new Point(origin.x - w, origin.y - h, origin.z - l, 1, 1, 1);
-        Point H = new Point(origin.x + w, origin.y - h, origin.z - l, 1, 1, 1);
+        Point A = new Point(0 - w, 0 + h, 0 + l, 1, 1, 1);
+        Point B = new Point(0 + w, 0 + h, 0 + l, 1, 1, 1);
+        Point C = new Point(0 - w, 0 - h, 0 + l, 1, 1, 1);
+        Point D = new Point(0 + w, 0 - h, 0 + l, 1, 1, 1);
+        Point E = new Point(0 - w, 0 + h, 0 - l, 1, 1, 1);
+        Point F = new Point(0 + w, 0 + h, 0 - l, 1, 1, 1);
+        Point G = new Point(0 - w, 0 - h, 0 - l, 1, 1, 1);
+        Point H = new Point(0 + w, 0 - h, 0 - l, 1, 1, 1);
         faces = new Polygon[]{
                 new Polygon(new Point[]{A, C, D, B}, origin),//front
                 new Polygon(new Point[]{F, H, G, E}, origin),//back
@@ -204,9 +202,17 @@ public class Cube {
     }
 
     public FloatBuffer makenormbuff() {
-        FloatBuffer normal = BufferUtils.createFloatBuffer(12 * 3);
-        for (int i = 0; i < faces.length; i++)
-            normal.put(faces[i].getNormals());
+        FloatBuffer normal = BufferUtils.createFloatBuffer(6 * 3);
+//        for (int i = 0; i < faces.length; i++)
+//            normal.put(faces[i].getNormals());
+
+        normal.put(new float[]{origin.x,origin.y-1,origin.z});
+        normal.put(new float[]{origin.x,origin.y+1,origin.z});
+        normal.put(new float[]{origin.x+1,origin.y,origin.z});
+        normal.put(new float[]{origin.x,origin.y,origin.z+1});
+        normal.put(new float[]{origin.x-1,origin.y,origin.z});
+        normal.put(new float[]{origin.x,origin.y,origin.z-1});
+
         normal.flip();
         return normal;
     }

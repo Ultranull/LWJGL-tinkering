@@ -1,5 +1,7 @@
 package Utils;
 
+import org.lwjgl.util.vector.Vector3f;
+
 import java.awt.image.BufferedImage;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -25,6 +27,10 @@ public class Polygon {
     public Polygon(Point[] v,Point o) {
         verts=v;
         origin=o;
+        for (int i = 0, vertsLength = verts.length; i < vertsLength; i++) {
+            Point p = verts[i];
+            verts[i] = p.sum(o);
+        }
         initnormals();
     }
     private void initnormals(){
@@ -39,10 +45,11 @@ public class Polygon {
     }
 
     public void draw(){
-        glEnable(GL_TEXTURE_2D);
-        glBegin(GL_POLYGON);
+        glEnable (GL_BLEND);
         if(hasTex)
             glBindTexture(GL_TEXTURE_2D, texid);
+        glEnable(GL_TEXTURE_2D);
+        glBegin(GL_POLYGON);
         for(Point norm:normals)
             glNormal3f(norm.x,norm.y,norm.z);
         for (int i = 0; i < verts.length; i++) {
@@ -116,20 +123,20 @@ public class Polygon {
         glDisable(GL_TEXTURE_2D);
         glDisable (GL_BLEND);
     }
-    public void HasTex(Point[] texvert, BufferedImage tex){
+    public void HasTex(Point[] texvert, int id){
         hasTex=true;
         texture=texvert;
-        texid=Textureloader.loadTexture(tex);
+        texid=id;
     }
     public static Point calcnormal(Point A,Point B,Point C){
-        Point V1= B.sub(A);
-        Point V2= C.sub(A);
+        Point V1= new Point(B.x-A.x,B.y-A.y,B.z-A.z);
+        Point V2= new Point(C.x-A.x,C.y-A.y,C.z-A.z);
         Point surfaceNormal=new Point(0,0,0);
         surfaceNormal.x = (V1.y*V2.z) - (V1.z*V2.y);
         surfaceNormal.y = (V1.z*V2.x) - (V1.x*V2.z);
         surfaceNormal.z = (V1.x*V2.y) - (V1.y*V2.x);
         surfaceNormal.normalize();
-        surfaceNormal.makep();
+//        surfaceNormal.makep();
         return surfaceNormal;
     }
     public float[] getVerts(){
@@ -169,6 +176,19 @@ public class Polygon {
         return origin;
     }
     public void setOrigin(Point origin) {
+        for (int i = 0, vertsLength = verts.length; i < vertsLength; i++) {
+            Point p = verts[i];
+            verts[i] = p.sub(this.origin).sum(origin);
+        }
         this.origin = origin;
+        initnormals();
+    }
+
+    public int getTexid() {
+        return texid;
+    }
+
+    public void setTexid(int texid) {
+        this.texid = texid;
     }
 }

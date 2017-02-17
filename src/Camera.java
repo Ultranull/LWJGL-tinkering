@@ -15,6 +15,9 @@ public class Camera {
 
     private static Vector3f pos;
     private static Vector3f rotation;
+    public static int dm=0;
+    public static boolean ismoving=false;
+    private static boolean mouse=true;
 
     public static void create() {
         pos = new Vector3f(0, 0, 0);
@@ -44,7 +47,7 @@ public class Camera {
     }
 
     public static void acceptInputRotate(float delta) {
-        if(Mouse.isGrabbed()) {
+        if(Mouse.isGrabbed()&&mouse) {
             float mouseDX = Mouse.getDX();
             float mouseDY = -Mouse.getDY();
             rotation.y += mouseDX * mouseSensitivity * delta;
@@ -67,27 +70,23 @@ public class Camera {
         boolean keyDown = Keyboard.isKeyDown(Keyboard.KEY_S);
         boolean keyRight = Keyboard.isKeyDown(Keyboard.KEY_D);
         boolean keyLeft = Keyboard.isKeyDown(Keyboard.KEY_A);
-
-        boolean keyE = Keyboard.isKeyDown(Keyboard.KEY_E);
-        boolean keyQ = Keyboard.isKeyDown(Keyboard.KEY_Q);
-
         boolean keyFast = Keyboard.isKeyDown(Keyboard.KEY_Q);
         boolean keySlow = Keyboard.isKeyDown(Keyboard.KEY_E);
         boolean keyFlyUp = Keyboard.isKeyDown(Keyboard.KEY_SPACE);
         boolean keyFlyDown = Keyboard.isKeyDown(Keyboard.KEY_LSHIFT);
 
 
-        float speed;
+        float speed =moveSpeed/5f;
 
-        if(keyFast) {
-            speed = moveSpeed * 5;
-        }
-        else if(keySlow) {
-            speed = moveSpeed / 5;
-        }
-        else {
-            speed = moveSpeed;
-        }
+//        if(keyFast) {
+//            speed = moveSpeed * 5;
+//        }
+//        else if(keySlow) {
+//            speed = moveSpeed / 5;
+//        }
+//        else {
+//            speed = moveSpeed;
+//        }
 
         speed *= delta;
 
@@ -105,21 +104,28 @@ public class Camera {
             rotation.y += mouseSensitivity * delta*15;
 
         if(keyDown) {
-            pos.x -= Math.sin(Math.toRadians(rotation.y)) * speed/5d;
-            pos.z += Math.cos(Math.toRadians(rotation.y)) * speed/5d;
-        }
+            dm++;
+            pos.x -= Math.sin(Math.toRadians(rotation.y)) * speed;
+            pos.z += Math.cos(Math.toRadians(rotation.y)) * speed;
+            ismoving=true;
+        }else
         if(keyUp) {
-            pos.x += Math.sin(Math.toRadians(rotation.y)) * speed/5d;
-            pos.z -= Math.cos(Math.toRadians(rotation.y)) * speed/5d;
-        }
-        if(keyQ) {
-            pos.x += Math.sin(Math.toRadians(rotation.y - 90)) * speed/20d;
-            pos.z -= Math.cos(Math.toRadians(rotation.y - 90)) * speed/20d;
-        }
-        if(keyE) {
+            dm--;
+            pos.x += Math.sin(Math.toRadians(rotation.y)) * speed;
+            pos.z -= Math.cos(Math.toRadians(rotation.y)) * speed;
+            ismoving=true;
+        }else if(keyFast) {
+            dm++;
+            pos.x += Math.sin(Math.toRadians(rotation.y - 90)) * speed;
+            pos.z -= Math.cos(Math.toRadians(rotation.y - 90)) * speed;
+            ismoving=true;
+        }else
+        if(keySlow) {
+            dm--;
             pos.x += Math.sin(Math.toRadians(rotation.y + 90)) * speed;
             pos.z -= Math.cos(Math.toRadians(rotation.y + 90)) * speed;
-        }
+            ismoving=true;
+        }else ismoving=false;
     }
 
     public static void setSpeed(float speed) {
