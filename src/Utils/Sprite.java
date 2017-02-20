@@ -7,7 +7,7 @@ import static org.lwjgl.opengl.GL11.*;
  * 
  * 
  */
-public class Sprite {
+ class Sprite {
 
     private Polygon im;
     private Point or;
@@ -16,7 +16,7 @@ public class Sprite {
     private int te;
     private int index=0;
     int rate=30;
-    public Sprite(int[] t,Point o,int tt,int ttt){
+     Sprite(int[] t,Point o,int tt,int ttt){
         or=o;
         texs=t;
         ts=tt;
@@ -34,7 +34,7 @@ public class Sprite {
         },texs[ts]);
 
     }
-    public  void draw(float rx,float ry,float rz,int ticks){
+      void draw(float rx,float ry,float rz,int ticks){
         if(ticks%rate==0) {
             index++;
             if(index>te||index<ts)
@@ -48,11 +48,11 @@ public class Sprite {
         im.draw();
         glPopMatrix();
     }
-    public void settex(int i,int c) {
+     void settex(int i,int c) {
         ts=i;
         te=c;
     }
-    public void setOr(Point or) {
+     void setOr(Point or) {
         this.or = or;
     }
 }

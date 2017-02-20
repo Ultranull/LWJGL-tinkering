@@ -42,7 +42,7 @@ public class Point {
         this.g=1;
         this.b=1;
     }
-    public Point findOnLine(Point b,float dist){
+     Point findOnLine(Point b,float dist){
         float dt=distance(b);
         float t=dist/dt;
         return new Point(
@@ -62,7 +62,7 @@ public class Point {
         ans=Math.abs((d1+d2)-d3);
         return ans<0.00001;//abs((d1+d2)-length)<# close to zero
     }
-    public float distance(Point a){
+     float distance(Point a){
         float px = a.x - this.x;
         float py = a.y - this.y;
         float pz = a.z - this.z;
@@ -88,18 +88,18 @@ public class Point {
     public Point div(Point B,float d){
         return new Point((x+B.x)/d,(y+B.y)/d,(z+B.z)/d);
     }
-    public Point sub(Point p){
+     Point sub(Point p){
         return new Point(x-p.x,y-p.y,z-p.z);
     }
     public Point sum(Point p){
         return new Point(x+p.x,y+p.y,z+p.z);
     }
-    public void sum(float x,float y,float z){
+     void sum(float x,float y,float z){
         this.x+=x;
         this.y+=y;
         this.z+=z;
     }
-    public void normalize(){
+     void normalize(){
         float v=(float) Math.sqrt(x*x+y*y+z*z);
         setXYZ(x/v,y/v,z/v);
     }

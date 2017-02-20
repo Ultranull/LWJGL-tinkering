@@ -9,9 +9,7 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.util.glu.GLU;
-import org.lwjgl.util.vector.Matrix;
 import org.lwjgl.util.vector.Vector3f;
-import sun.awt.image.ImageWatched;
 
 
 import java.io.BufferedReader;
@@ -23,24 +21,23 @@ import static org.lwjgl.opengl.GL20.*;
 
 import javax.swing.*;
 import java.nio.FloatBuffer;
-import java.util.Arrays;
 import java.util.LinkedList;
 
 import static org.lwjgl.opengl.GL11.*;
 
-public class main {
+class main {
 
-    long lastFrame;
-    int fps;
-    long lastFPS;
+    private long lastFrame;
+    private int fps;
+    private long lastFPS;
 
-    LinkedList<Cube> walls;
-    Point cen;
-    Polygon gui;
-    Toaster toaster;
-    int[][] colmap;
+    private LinkedList<Cube> walls;
+    private Point cen;
+    private Polygon gui;
+    private Toaster toaster;
+    private int[][] colmap;
 
-    public void start() {
+    void start() {
 
         JProgressBar p=new JProgressBar(0,100);
         p.setValue(0);
@@ -73,15 +70,6 @@ public class main {
                 "gui","images\\GUI.png",
         });
         toaster=new Toaster(Material.addMat("toaster","images\\toaster.png",32,32,8,4,2),new Point(2,0,7));
-        if(false)
-            toaster.setPath(new Path(new Point[]{
-                    new Point(2,0,7),
-                    new Point(2,0,1),
-                    new Point(20,0,1),
-                    new Point(18,0,5),
-                    new Point(18,0,7),
-                    new Point(2,0,7),
-            },true));
         walls=new LinkedList<>();
         String[] map={//        111111111122
                 //    0123456789012345678901
@@ -209,11 +197,11 @@ public class main {
             initLight();
 
     }
-    int ticks =0;
-    boolean tl=false;
-    boolean pf=false;
-    Point player;
-    Point oplayer=new Point(0,0,0);
+    private int ticks =0;
+    private boolean tl=false;
+    private boolean pf=false;
+    private Point player;
+    private Point oplayer=new Point(0,0,0);
     private void update(int delta) {
         initGL();
         updateFPS();
@@ -342,17 +330,17 @@ public class main {
         dw=(dw<0)?0:dw;
         Camera.setSpeed(dw);
     }
-    public int getDelta() {
+    int getDelta() {
         long time = getTime();
         int delta = (int) (time - lastFrame);
         lastFrame = time;
 
         return delta;
     }
-    public long getTime() {
+    long getTime() {
         return (Sys.getTime() * 1000) / Sys.getTimerResolution();
     }
-    public void updateFPS() {
+    void updateFPS() {
         if (getTime() - lastFPS > 1000) {
             Display.setTitle("FPS: " + fps);
             fps = 0;
@@ -375,59 +363,6 @@ public class main {
         return map;
     }
 
-    public static int loadShaderPair(String vertexShaderLocation, String fragmentShaderLocation) {
-        int shaderProgram = glCreateProgram();
-        int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-        int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-        StringBuilder vertexShaderSource = new StringBuilder();
-        StringBuilder fragmentShaderSource = new StringBuilder();
-        BufferedReader vertexShaderFileReader = null;
-        try {
-            vertexShaderFileReader = new BufferedReader(new FileReader(vertexShaderLocation));
-            String line;
-            while ((line = vertexShaderFileReader.readLine()) != null) {
-                vertexShaderSource.append(line).append('\n');
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return -1;
-        }
-        BufferedReader fragmentShaderFileReader = null;
-        try {
-            fragmentShaderFileReader = new BufferedReader(new FileReader(fragmentShaderLocation));
-            String line;
-            while ((line = fragmentShaderFileReader.readLine()) != null) {
-                fragmentShaderSource.append(line).append('\n');
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return -1;
-        }
-        glShaderSource(vertexShader, vertexShaderSource);
-        glCompileShader(vertexShader);
-        if (glGetShaderi(vertexShader, GL_COMPILE_STATUS) == GL_FALSE) {
-            System.err.println("Vertex shader wasn't able to be compiled correctly. Error log:");
-            System.err.println(glGetShaderInfoLog(vertexShader, 1024));
-            return -1;
-        }
-        glShaderSource(fragmentShader, fragmentShaderSource);
-        glCompileShader(fragmentShader);
-        if (glGetShaderi(fragmentShader, GL_COMPILE_STATUS) == GL_FALSE) {
-            System.err.println("Fragment shader wasn't able to be compiled correctly. Error log:");
-            System.err.println(glGetShaderInfoLog(fragmentShader, 1024));
-        }
-        glAttachShader(shaderProgram, vertexShader);
-        glAttachShader(shaderProgram, fragmentShader);
-        glLinkProgram(shaderProgram);
-        if (glGetProgrami(shaderProgram, GL_LINK_STATUS) == GL_FALSE) {
-            System.err.println("Shader program wasn't linked correctly.");
-            System.err.println(glGetProgramInfoLog(shaderProgram, 1024));
-            return -1;
-        }
-        glDeleteShader(vertexShader);
-        glDeleteShader(fragmentShader);
-        return shaderProgram;
-    }
 
 
 }

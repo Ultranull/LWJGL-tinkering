@@ -1,7 +1,5 @@
 package Utils;
 
-import org.lwjgl.Sys;
-import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
@@ -14,7 +12,7 @@ public class Path {
     private int index=0;
     private boolean loops;
     private boolean done=false;
-    public Path(Point[] locs,boolean l){
+     Path(Point[] locs,boolean l){
         loops=l;
         path=new LinkedList<>();
         Collections.addAll(path, locs);
@@ -101,12 +99,12 @@ public class Path {
         }
         return new Path(points,false);
     }
-    public float movementDirection(){
+     float movementDirection(){
         int i=index+1>=path.size()?0:index+1;
         return (float) Math.toDegrees(Math.atan2(path.get(index).z-path.get(i).z
                 ,path.get(index).x-path.get(i).x));
     }
-    public void next(){
+     void next(){
         index++;
         if(index>=path.size())
             if(loops)
@@ -117,7 +115,7 @@ public class Path {
             }
 
     }
-    public void normalize(float dist){
+     void normalize(float dist){
         LinkedList<Point> newpath=new LinkedList<>();
         newpath.add(path.get(0));
         for (int i = 1; i < path.size(); i++) {
@@ -140,7 +138,7 @@ public class Path {
     public void translate(float x,float y,float z){
         for (Point p : path) p.sum(x, y, z);
     }
-    public Point get(){
+     Point get(){
         return path.get(index);
     }
     public int size(){
@@ -149,5 +147,5 @@ public class Path {
     public void reset(){
         index=0;
     }
-    public boolean isDone(){return done;}
+     boolean isDone(){return done;}
 }

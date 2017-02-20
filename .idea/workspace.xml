@@ -4,18 +4,15 @@
     <bookmark url="file://$PROJECT_DIR$/src/Renderer.java" line="159" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="path + sprite + material">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Toaster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" />
+    <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="intellij with its annoying yellow warnings">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/driver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/rotarms.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/rotarms.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Camera.java" afterPath="$PROJECT_DIR$/src/Camera.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Path.java" afterPath="$PROJECT_DIR$/src/Utils/Path.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Point.java" afterPath="$PROJECT_DIR$/src/Utils/Point.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Sprite.java" afterPath="$PROJECT_DIR$/src/Utils/Sprite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/driver.java" afterPath="$PROJECT_DIR$/src/driver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Toaster.java" afterPath="$PROJECT_DIR$/src/Utils/Toaster.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rotarms.java" afterPath="$PROJECT_DIR$/src/rotarms.java" />
     </list>
     <ignored path="3Dshapes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +53,11 @@
       <file leaf-file-name="Sprite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="191">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
-                <element signature="e#1262#1263#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1260#1261#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,8 +66,8 @@
       <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="106" column="75" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
+            <state relative-caret-position="1210">
+              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
               <folding>
                 <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
                 <element signature="method#midpoint#0;class#Point#0" expanded="false" />
@@ -86,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initLight#0;class#main#0" expanded="false" />
@@ -99,9 +96,7 @@
                 <element signature="method#drawskybox#0;class#main#0" expanded="false" />
                 <element signature="method#pointset#0;class#main#0" expanded="false" />
                 <element signature="method#getDelta#0;class#main#0" expanded="false" />
-                <element signature="method#updateFPS#0;class#main#0" expanded="false" />
                 <element signature="method#makecolmap#0;class#main#0" expanded="false" />
-                <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,31 +105,30 @@
       <file leaf-file-name="Toaster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Toaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="22">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#1971#1972#0" expanded="true" />
-                <element signature="e#1996#1997#0" expanded="true" />
+                <element signature="e#1940#1941#0" expanded="true" />
+                <element signature="e#1965#1966#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Path.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+            <state relative-caret-position="191">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4241#4242#0" expanded="true" />
-                <element signature="e#4292#4293#0" expanded="true" />
-                <element signature="e#4316#4317#0" expanded="true" />
-                <element signature="e#4354#4355#0" expanded="true" />
-                <element signature="e#4377#4378#0" expanded="true" />
-                <element signature="e#4411#4412#0" expanded="true" />
-                <element signature="e#4436#4437#0" expanded="true" />
-                <element signature="e#4459#4460#0" expanded="true" />
+                <element signature="e#4160#4161#0" expanded="true" />
+                <element signature="e#4211#4212#0" expanded="true" />
+                <element signature="e#4229#4230#0" expanded="true" />
+                <element signature="e#4267#4268#0" expanded="true" />
+                <element signature="e#4290#4291#0" expanded="true" />
+                <element signature="e#4324#4325#0" expanded="true" />
+                <element signature="e#4349#4350#0" expanded="true" />
+                <element signature="e#4372#4373#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,13 +177,13 @@
         <option value="$PROJECT_DIR$/src/Utils/Material.java" />
         <option value="$PROJECT_DIR$/src/Utils/Polygon.java" />
         <option value="$PROJECT_DIR$/src/Camera.java" />
-        <option value="$PROJECT_DIR$/src/Utils/Sprite.java" />
         <option value="$PROJECT_DIR$/src/driver.java" />
         <option value="$PROJECT_DIR$/src/rotarms.java" />
-        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
         <option value="$PROJECT_DIR$/src/Utils/Toaster.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Sprite.java" />
         <option value="$PROJECT_DIR$/src/Utils/Path.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
       </list>
     </option>
   </component>
@@ -927,7 +921,7 @@
       <workItem from="1486799145146" duration="18583000" />
       <workItem from="1487043329998" duration="23000" />
       <workItem from="1487122592270" duration="1486000" />
-      <workItem from="1487296600108" duration="35995000" />
+      <workItem from="1487296600108" duration="36655000" />
     </task>
     <task id="LOCAL-00001" summary="boop">
       <created>1484508841802</created>
@@ -978,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487299268635</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pathfinding with A*">
+      <created>1487554013438</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1487554013438</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227707000" />
+    <option name="totallyTimeSpent" value="228367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -999,13 +1000,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32745314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32745314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52149945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25689086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25689086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1073,7 +1074,10 @@
     <MESSAGE value="progress" />
     <MESSAGE value="skybox(kinda) + better texture handling + PROGRESSBAR!" />
     <MESSAGE value="path + sprite + material" />
-    <option name="LAST_COMMIT_MESSAGE" value="path + sprite + material" />
+    <MESSAGE value="pathfinding with A*" />
+    <MESSAGE value="intellij withits annoying yellow workings" />
+    <MESSAGE value="intellij with its annoying yellow warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="intellij with its annoying yellow warnings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1105,9 +1109,7 @@
             <element signature="method#drawskybox#0;class#main#0" expanded="false" />
             <element signature="method#pointset#0;class#main#0" expanded="false" />
             <element signature="method#getDelta#0;class#main#0" expanded="false" />
-            <element signature="method#updateFPS#0;class#main#0" expanded="false" />
             <element signature="method#makecolmap#0;class#main#0" expanded="false" />
-            <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1179,9 +1181,7 @@
             <element signature="method#drawskybox#0;class#main#0" expanded="false" />
             <element signature="method#pointset#0;class#main#0" expanded="false" />
             <element signature="method#getDelta#0;class#main#0" expanded="false" />
-            <element signature="method#updateFPS#0;class#main#0" expanded="false" />
             <element signature="method#makecolmap#0;class#main#0" expanded="false" />
-            <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1446,31 +1446,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver.java">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Toaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="22">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="106" column="75" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
+        <state relative-caret-position="1210">
+          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
           <folding>
             <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
             <element signature="method#midpoint#0;class#Point#0" expanded="false" />
@@ -1485,10 +1475,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#4160#4161#0" expanded="true" />
+            <element signature="e#4211#4212#0" expanded="true" />
+            <element signature="e#4229#4230#0" expanded="true" />
+            <element signature="e#4267#4268#0" expanded="true" />
+            <element signature="e#4290#4291#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#4349#4350#0" expanded="true" />
+            <element signature="e#4372#4373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1260#1261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
@@ -1497,38 +1525,7 @@
             <element signature="method#drawskybox#0;class#main#0" expanded="false" />
             <element signature="method#pointset#0;class#main#0" expanded="false" />
             <element signature="method#getDelta#0;class#main#0" expanded="false" />
-            <element signature="method#updateFPS#0;class#main#0" expanded="false" />
             <element signature="method#makecolmap#0;class#main#0" expanded="false" />
-            <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Toaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#1971#1972#0" expanded="true" />
-            <element signature="e#1996#1997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
-            <element signature="e#4292#4293#0" expanded="true" />
-            <element signature="e#4316#4317#0" expanded="true" />
-            <element signature="e#4354#4355#0" expanded="true" />
-            <element signature="e#4377#4378#0" expanded="true" />
-            <element signature="e#4411#4412#0" expanded="true" />
-            <element signature="e#4436#4437#0" expanded="true" />
-            <element signature="e#4459#4460#0" expanded="true" />
           </folding>
         </state>
       </provider>

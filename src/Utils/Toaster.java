@@ -1,6 +1,5 @@
 package Utils;
 
-import static org.lwjgl.opengl.GL11.*;
 
 /**
  * Created by usr on 2/17/2017.
@@ -21,7 +20,7 @@ public class Toaster {
     private boolean hasPath=false;
     private Point or;
     private DIR dir;
-    int moverate=2;
+    private int moverate=2;
     public Toaster(int[] t,Point o){
         or=o;
         sprite=new Sprite(t,o,4,5);
