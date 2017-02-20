@@ -11,14 +11,11 @@ public class Sprite {
 
     private Polygon im;
     private Point or;
-    private Path path;
-    private boolean hasPath=false;
     private int[] texs;
     private int ts;
     private int te;
     private int index=0;
     int rate=30;
-    int moverate=2;
     public Sprite(int[] t,Point o,int tt,int ttt){
         or=o;
         texs=t;
@@ -37,20 +34,10 @@ public class Sprite {
         },texs[ts]);
 
     }
-public void setPath(Path p){
-    hasPath=true;
-    path=p;
-    path.normalize(1/16f);
-
-}
     public  void draw(float rx,float ry,float rz,int ticks){
-        or=path.get();
-        if(hasPath&&ticks%moverate==0){
-            path.next();
-        }
         if(ticks%rate==0) {
             index++;
-            if(index>te)
+            if(index>te||index<ts)
                 index=ts;
             im.setTexid(texs[index]);
         }
@@ -61,5 +48,11 @@ public void setPath(Path p){
         im.draw();
         glPopMatrix();
     }
-    
+    public void settex(int i,int c) {
+        ts=i;
+        te=c;
+    }
+    public void setOr(Point or) {
+        this.or = or;
+    }
 }

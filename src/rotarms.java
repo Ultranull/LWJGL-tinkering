@@ -166,11 +166,11 @@ public class rotarms {
         Point a=makeArm(new Point(0,0,0,0,1,0),2, new float[]{rotation*rs[0],rotation*rs[1],rotation*rs[2]},new float[]{1,0,1});
         Point b=makeArm(a,2,                      new float[]{rotation*rs[3],rotation*rs[4],rotation*rs[5]},new float[]{0,1,1});
         Point p=makeArm(b,2,                      new float[]{rotation*rs[6],rotation*rs[7],rotation*rs[8]},new float[]{1,1,0});
-        if (!points.stream().anyMatch(point -> point.compare(p))&&armsinput.a3a)
+        if (!points.stream().anyMatch(point -> point.equals(p))&&armsinput.a3a)
             points.add(p);
-        if (!points.stream().anyMatch(point -> point.compare(a))&&armsinput.a1a)
+        if (!points.stream().anyMatch(point -> point.equals(a))&&armsinput.a1a)
             points.add(a);
-        if (!points.stream().anyMatch(point -> point.compare(b))&&armsinput.a2a)
+        if (!points.stream().anyMatch(point -> point.equals(b))&&armsinput.a2a)
             points.add(b);
         for (Point pp :points) {
             drawSphere(pp);

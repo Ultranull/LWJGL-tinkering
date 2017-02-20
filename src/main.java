@@ -37,7 +37,8 @@ public class main {
     LinkedList<Cube> walls;
     Point cen;
     Polygon gui;
-    Sprite toaster;
+    Toaster toaster;
+    int[][] colmap;
 
     public void start() {
 
@@ -61,7 +62,7 @@ public class main {
             System.exit(0);
         }
 
-
+        p.setValue(10);
         Material.init(new String[]{
                 "skypz","images\\sky_pos_z.png",
                 "skynz","images\\sky_neg_z.png",
@@ -71,31 +72,38 @@ public class main {
                 "tile","images\\marble_tile.jpg",
                 "gui","images\\GUI.png",
         });
-        toaster=new Sprite(Material.addMat("toaster","images\\toaster.png",32,32,8,4,2),new Point(5,0,5),4,5);
-        toaster.setPath(new Path(new Point[]{
-                new Point(5,0,5),
-                new Point(4,0,5),
-                new Point(4,0,4),
-                new Point(5,0,4),
-        },true));
+        toaster=new Toaster(Material.addMat("toaster","images\\toaster.png",32,32,8,4,2),new Point(2,0,7));
+        if(false)
+            toaster.setPath(new Path(new Point[]{
+                    new Point(2,0,7),
+                    new Point(2,0,1),
+                    new Point(20,0,1),
+                    new Point(18,0,5),
+                    new Point(18,0,7),
+                    new Point(2,0,7),
+            },true));
         walls=new LinkedList<>();
-        String[] map={
-                "############" ,
-                "#------#---#" ,
-                "#------#---#" ,
-                "#------#-###" ,
-                "#----------#" ,
-                "#----------#" ,
-                "#----------#" ,
-                "############"};
+        String[] map={//        111111111122
+                //    0123456789012345678901
+                /*0*/"######################" ,
+                /*1*/"##-------------------#" ,
+                /*2*/"##--###########-####-#" ,
+                /*3*/"#---#----#-------#---#" ,
+                /*4*/"#--------#-------#---#" ,
+                /*5*/"##-####-##########-###" ,
+                /*6*/"#---------#----------#" ,
+                /*7*/"#--------------------#" ,
+                /*8*/"#---------#----------#" ,
+                /*9*/"######################"};
         cen=new Point(map.length/2,0,map[0].length()/2);
         for(int r=0;r<map.length;r++)
             for(int c=0;c<map[0].length();c++){
                 if(map[r].charAt(c)=='#')
-                    walls.add(new Cube(r,.5f,c,.5f,.5f,.5f,Material.get("brick")));
-                walls.add(new Cube(r,0,c,.5f,.5f,.125f,Material.get("tile")));
+                    walls.add(new Cube(c,.5f,r,.5f,.5f,.5f,Material.get("brick")));
+                walls.add(new Cube(c,0,r,.5f,.5f,.125f,Material.get("tile")));
             }
-
+        p.setValue(50);
+        colmap=makecolmap(map);
 
         gui=new Polygon(new Point[]{
                 new Point(0,1,0),
@@ -111,8 +119,7 @@ public class main {
 
         },Material.get("gui"));
 
-        p.setValue(96);
-
+        p.setValue(90);
 
         initGL();
         getDelta();
@@ -120,6 +127,7 @@ public class main {
 
         Camera.create();
         Camera.setPos(new Vector3f(3,.5f,3));
+        toaster.setPath(Path.findPath(toaster.getOr(),new Point(Camera.getPos()),colmap));
         Camera.apply();
 
         p.setValue(100);
@@ -203,16 +211,21 @@ public class main {
     }
     int ticks =0;
     boolean tl=false;
+    boolean pf=false;
+    Point player;
+    Point oplayer=new Point(0,0,0);
     private void update(int delta) {
         initGL();
         updateFPS();
         getInput();
-
+        player=new Point(Camera.getPos()).round();
+        if(!oplayer.equal(player)&&pf) {
+            System.out.println(player+","+oplayer);
+            oplayer.setXYZ(player.x,player.y,player.z);
+            toaster.setPath(Path.findPath(toaster.getOr(), player, colmap));
+        }
         glClear(GL_COLOR_BUFFER_BIT
                 | GL_DEPTH_BUFFER_BIT);
-
-
-
         drawskybox();
         for (Cube c:walls)
             c.draw();
@@ -231,9 +244,9 @@ public class main {
         glEnable(GL_DEPTH_TEST);
         glPopMatrix();
 
-//        drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
-//        drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
-//        drawLine(new Point(50, 0, 0, 1, 0, 0), new Point(-50, 0, 0, 1, 0, 0));
+        drawLine(new Point(0, 50, 0, 0, 0, 1), new Point(0, -50, 0, 0, 0, 1));
+        drawLine(new Point(0, 0, 50, 0, 1, 0), new Point(0, 0, 0 - 50, 0, 1, 0));
+        drawLine(new Point(50, 0, 0, 1, 0, 0), new Point(-50, 0, 0, 1, 0, 0));
 
         ticks +=1;
     }
@@ -318,7 +331,10 @@ public class main {
             Display.destroy();
             System.exit(0);
         }
-
+        if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
+            pf = !pf;
+            System.out.println(pf);
+        }
         if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){
             dd+=0.01;}
         if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){ dd-=0.01;}
@@ -347,7 +363,17 @@ public class main {
 
     float sin(float a){return(float) Math.sin(Math.toRadians(a));}
     float cos(float a){return(float) Math.cos(Math.toRadians(a));}
-
+    private int[][] makecolmap(String[] m){
+        int[][] map=new int[m[0].length()][m.length];
+        for(int r=0;r<m.length;r++)
+            for(int c=0;c<m[0].length();c++) {
+                if (m[r].charAt(c) == '#')
+                    map[c][r]=0xffff;
+                else
+                    map[c][r]=1;
+            }
+        return map;
+    }
 
     public static int loadShaderPair(String vertexShaderLocation, String fragmentShaderLocation) {
         int shaderProgram = glCreateProgram();

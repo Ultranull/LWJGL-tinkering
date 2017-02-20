@@ -1,5 +1,7 @@
 package Utils;
 
+import org.lwjgl.util.vector.Vector3f;
+
 /**
  * Created by usr on 11/14/2016.
  *
@@ -24,6 +26,14 @@ public class Point {
         this.b=1;
     }
 
+    public Point(Vector3f v){
+        this.x=v.getX();
+        this.y=v.getY();
+        this.z=v.getZ();
+        this.r=1;
+        this.g=1;
+        this.b=1;
+    }
     public Point(){
         this.x=0;
         this.y=0;
@@ -58,7 +68,7 @@ public class Point {
         float pz = a.z - this.z;
         return (float)Math.sqrt(px * px + py * py + pz * pz);
     }
-    public boolean compare(Point a){
+    public boolean equal(Point a){
         return a.x==x&&a.y==y&&a.z==z;
     }
     public void setXYZ(float x,float y,float z){
@@ -84,9 +94,18 @@ public class Point {
     public Point sum(Point p){
         return new Point(x+p.x,y+p.y,z+p.z);
     }
+    public void sum(float x,float y,float z){
+        this.x+=x;
+        this.y+=y;
+        this.z+=z;
+    }
     public void normalize(){
         float v=(float) Math.sqrt(x*x+y*y+z*z);
         setXYZ(x/v,y/v,z/v);
+    }
+    public Point round(){
+        setXYZ((float) Math.floor(x),(float)Math.floor(y),(float)Math.floor(z));
+        return this;
     }
     @Override
     public String toString() {

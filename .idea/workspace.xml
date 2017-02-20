@@ -4,44 +4,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/Renderer.java" line="159" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/GUI.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brick.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/mahog_texture.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/marble.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/marble_tile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_neg_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_neg_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_neg_z.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_pos_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_pos_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sky_pos_z.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toaster.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterED.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterEU.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterND.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterNU.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterSD.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterSU.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterWD.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/toasterWU.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Material.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Path.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/3Dshapes_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tinkering_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" afterPath="$PROJECT_DIR$/out/artifacts/3Dshapes_jar/3Dshapes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Armsinput.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Armsinput.class" />
+    <list default="true" id="2c495e82-ead4-40d9-a2cc-a4dc17ae242e" name="Default" comment="path + sprite + material">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Toaster.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/Camera.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" afterPath="$PROJECT_DIR$/out/production/LWJGL-tinkering/main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LWJGL-tinkering.iml" afterPath="$PROJECT_DIR$/LWJGL-tinkering.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Camera.java" afterPath="$PROJECT_DIR$/src/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Cube.java" afterPath="$PROJECT_DIR$/src/Utils/Cube.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Path.java" afterPath="$PROJECT_DIR$/src/Utils/Path.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Point.java" afterPath="$PROJECT_DIR$/src/Utils/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Polygon.java" afterPath="$PROJECT_DIR$/src/Utils/Polygon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Sprite.java" afterPath="$PROJECT_DIR$/src/Utils/Sprite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Textureloader.java" afterPath="$PROJECT_DIR$/src/Utils/Textureloader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/driver.java" afterPath="$PROJECT_DIR$/src/driver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rotarms.java" afterPath="$PROJECT_DIR$/src/rotarms.java" />
     </list>
     <ignored path="3Dshapes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,6 +29,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LWJGL-tinkering$driver.coverage" NAME="driver Coverage Results" MODIFIED="1487384915194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -64,68 +41,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.java">
+      <file leaf-file-name="driver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2287">
-              <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initLight#0;class#main#0" expanded="false" />
-                <element signature="method#initGL#0;class#main#0" expanded="false" />
-                <element signature="method#drawskybox#0;class#main#0" expanded="false" />
-                <element signature="method#getDelta#0;class#main#0" expanded="false" />
-                <element signature="method#updateFPS#0;class#main#0" expanded="false" />
-                <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="method#midpoint#0;class#Point#0" expanded="false" />
-                <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
-                <element signature="method#distance#0;class#Point#0" expanded="false" />
-                <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
-                <element signature="method#setRGB#0;class#Point#0" expanded="false" />
-                <element signature="method#makep#0;class#Point#0" expanded="false" />
-                <element signature="method#normalize#0;class#Point#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Polygon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="131" column="40" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#draw#1;class#Polygon#0" expanded="false" />
-                <element signature="method#getVerts#0;class#Polygon#0" expanded="false" />
-                <element signature="method#getColors#0;class#Polygon#0" expanded="false" />
-                <element signature="method#getNormals#0;class#Polygon#0" expanded="false" />
-                <element signature="method#setOrigin#0;class#Polygon#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Path.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#makeSmooth#0;class#Path#0" expanded="false" />
-                <element signature="method#makeSmooth#1;class#Path#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,9 +56,86 @@
       <file leaf-file-name="Sprite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="175">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+              <folding>
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1290#1291#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="106" column="75" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
+              <folding>
+                <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
+                <element signature="method#midpoint#0;class#Point#0" expanded="false" />
+                <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
+                <element signature="method#distance#0;class#Point#0" expanded="false" />
+                <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
+                <element signature="method#setRGB#0;class#Point#0" expanded="false" />
+                <element signature="method#makep#0;class#Point#0" expanded="false" />
+                <element signature="method#sum#1;class#Point#0" expanded="false" />
+                <element signature="method#normalize#0;class#Point#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initLight#0;class#main#0" expanded="false" />
+                <element signature="method#drawLine#0;class#main#0" expanded="false" />
+                <element signature="method#drawLine#1;class#main#0" expanded="false" />
+                <element signature="method#drawskybox#0;class#main#0" expanded="false" />
+                <element signature="method#pointset#0;class#main#0" expanded="false" />
+                <element signature="method#getDelta#0;class#main#0" expanded="false" />
+                <element signature="method#updateFPS#0;class#main#0" expanded="false" />
+                <element signature="method#makecolmap#0;class#main#0" expanded="false" />
+                <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toaster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Toaster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#1971#1972#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Path.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4241#4242#0" expanded="true" />
+                <element signature="e#4292#4293#0" expanded="true" />
+                <element signature="e#4316#4317#0" expanded="true" />
+                <element signature="e#4354#4355#0" expanded="true" />
+                <element signature="e#4377#4378#0" expanded="true" />
+                <element signature="e#4411#4412#0" expanded="true" />
+                <element signature="e#4436#4437#0" expanded="true" />
+                <element signature="e#4459#4460#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/armsinput.java" />
         <option value="$PROJECT_DIR$/src/Armsinput.form" />
         <option value="$PROJECT_DIR$/src/Armsinput.java" />
-        <option value="$PROJECT_DIR$/src/rotarms.java" />
         <option value="$PROJECT_DIR$/src/feild.java" />
         <option value="$PROJECT_DIR$/src/field.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Mesh.java" />
@@ -181,14 +179,16 @@
         <option value="$PROJECT_DIR$/src/Shapes/Textureloader.java" />
         <option value="$PROJECT_DIR$/src/Shapes/Cube.java" />
         <option value="$PROJECT_DIR$/src/Utils/Cube.java" />
-        <option value="$PROJECT_DIR$/src/Camera.java" />
         <option value="$PROJECT_DIR$/src/Utils/Textureloader.java" />
         <option value="$PROJECT_DIR$/src/Utils/Material.java" />
         <option value="$PROJECT_DIR$/src/Utils/Polygon.java" />
-        <option value="$PROJECT_DIR$/src/driver.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
-        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
+        <option value="$PROJECT_DIR$/src/Camera.java" />
         <option value="$PROJECT_DIR$/src/Utils/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/driver.java" />
+        <option value="$PROJECT_DIR$/src/rotarms.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Point.java" />
+        <option value="$PROJECT_DIR$/src/Utils/Toaster.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/Utils/Path.java" />
       </list>
     </option>
@@ -361,56 +361,7 @@
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LWJGL-tinkering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -976,7 +927,7 @@
       <workItem from="1486799145146" duration="18583000" />
       <workItem from="1487043329998" duration="23000" />
       <workItem from="1487122592270" duration="1486000" />
-      <workItem from="1487296600108" duration="2585000" />
+      <workItem from="1487296600108" duration="35995000" />
     </task>
     <task id="LOCAL-00001" summary="boop">
       <created>1484508841802</created>
@@ -1020,11 +971,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486608460157</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="path + sprite + material">
+      <created>1487299268635</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1487299268635</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194297000" />
+    <option name="totallyTimeSpent" value="227707000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,25 +1004,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.091510475" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52149945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25689086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17548595" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16954644" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892008" sideWeight="0.50567263" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25821066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24519774" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1113,18 +1072,19 @@
     <MESSAGE value="textures work but normals still dont [ITS WOLFENSTIEN TIME!]" />
     <MESSAGE value="progress" />
     <MESSAGE value="skybox(kinda) + better texture handling + PROGRESSBAR!" />
-    <option name="LAST_COMMIT_MESSAGE" value="skybox(kinda) + better texture handling + PROGRESSBAR!" />
+    <MESSAGE value="path + sprite + material" />
+    <option name="LAST_COMMIT_MESSAGE" value="path + sprite + material" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="i" />
-        <watch expression="c" />
-        <watch expression="ih" />
-        <watch expression="il" />
+        <watch expression="min" />
+        <watch expression="path" />
+        <watch expression="open" />
+        <watch expression="closed" />
       </configuration>
     </watches-manager>
   </component>
@@ -1133,40 +1093,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/rotarms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="method#midpoint#0;class#Point#0" expanded="false" />
-            <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
-            <element signature="method#distance#0;class#Point#0" expanded="false" />
-            <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
-            <element signature="method#setRGB#0;class#Point#0" expanded="false" />
-            <element signature="method#makep#0;class#Point#0" expanded="false" />
-            <element signature="method#normalize#0;class#Point#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1936">
@@ -1174,10 +1100,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#1;class#main#0" expanded="false" />
             <element signature="method#drawskybox#0;class#main#0" expanded="false" />
+            <element signature="method#pointset#0;class#main#0" expanded="false" />
             <element signature="method#getDelta#0;class#main#0" expanded="false" />
             <element signature="method#updateFPS#0;class#main#0" expanded="false" />
+            <element signature="method#makecolmap#0;class#main#0" expanded="false" />
             <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
           </folding>
         </state>
@@ -1215,12 +1144,14 @@
         <state relative-caret-position="1056">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
+            <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
             <element signature="method#midpoint#0;class#Point#0" expanded="false" />
             <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
             <element signature="method#distance#0;class#Point#0" expanded="false" />
             <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
             <element signature="method#setRGB#0;class#Point#0" expanded="false" />
             <element signature="method#makep#0;class#Point#0" expanded="false" />
+            <element signature="method#sum#1;class#Point#0" expanded="false" />
             <element signature="method#normalize#0;class#Point#0" expanded="false" />
           </folding>
         </state>
@@ -1243,10 +1174,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#1;class#main#0" expanded="false" />
             <element signature="method#drawskybox#0;class#main#0" expanded="false" />
+            <element signature="method#pointset#0;class#main#0" expanded="false" />
             <element signature="method#getDelta#0;class#main#0" expanded="false" />
             <element signature="method#updateFPS#0;class#main#0" expanded="false" />
+            <element signature="method#makecolmap#0;class#main#0" expanded="false" />
             <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
           </folding>
         </state>
@@ -1284,12 +1218,14 @@
         <state relative-caret-position="1056">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
+            <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
             <element signature="method#midpoint#0;class#Point#0" expanded="false" />
             <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
             <element signature="method#distance#0;class#Point#0" expanded="false" />
             <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
             <element signature="method#setRGB#0;class#Point#0" expanded="false" />
             <element signature="method#makep#0;class#Point#0" expanded="false" />
+            <element signature="method#sum#1;class#Point#0" expanded="false" />
             <element signature="method#normalize#0;class#Point#0" expanded="false" />
           </folding>
         </state>
@@ -1419,14 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rotarms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="175" column="27" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Documents/lwjgl/lwjgl-2.9.3/jar/lwjgl_util.jar!/org/lwjgl/util/vector/Vector.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1441,23 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Cube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="102" column="30" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1738">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Textureloader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -1465,30 +1376,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver.java">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Material.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="352">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#852#853#0" expanded="false" />
+            <element signature="e#886#887#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Material.java">
+    <entry file="file://$PROJECT_DIR$/src/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="219">
+          <caret line="125" column="17" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3840">
+          <caret line="224" column="5" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="131" column="40" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
+        <state relative-caret-position="259">
+          <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#draw#1;class#Polygon#0" expanded="false" />
+            <element signature="method#draw#2;class#Polygon#0" expanded="false" />
+            <element signature="method#draw#3;class#Polygon#0" expanded="false" />
+            <element signature="method#HasTex#0;class#Polygon#0" expanded="false" />
+            <element signature="method#calcnormal#0;class#Polygon#0" expanded="false" />
             <element signature="method#getVerts#0;class#Polygon#0" expanded="false" />
             <element signature="method#getColors#0;class#Polygon#0" expanded="false" />
             <element signature="method#getNormals#0;class#Polygon#0" expanded="false" />
@@ -1497,54 +1422,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
+    <entry file="file://$USER_HOME$/Desktop/PathFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2287">
-          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initLight#0;class#main#0" expanded="false" />
-            <element signature="method#initGL#0;class#main#0" expanded="false" />
-            <element signature="method#drawskybox#0;class#main#0" expanded="false" />
-            <element signature="method#getDelta#0;class#main#0" expanded="false" />
-            <element signature="method#updateFPS#0;class#main#0" expanded="false" />
-            <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-1122">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
+    <entry file="file://$USER_HOME$/Desktop/AStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="-3762">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rotarms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="172" column="59" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding>
-            <element signature="method#midpoint#0;class#Point#0" expanded="false" />
-            <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
-            <element signature="method#distance#0;class#Point#0" expanded="false" />
-            <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
-            <element signature="method#setRGB#0;class#Point#0" expanded="false" />
-            <element signature="method#makep#0;class#Point#0" expanded="false" />
-            <element signature="method#normalize#0;class#Point#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="106" column="75" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
+          <folding>
+            <element signature="method#findOnLine#0;class#Point#0" expanded="false" />
+            <element signature="method#midpoint#0;class#Point#0" expanded="false" />
+            <element signature="method#isPointOnRay#0;class#Point#0" expanded="false" />
+            <element signature="method#distance#0;class#Point#0" expanded="false" />
+            <element signature="method#setXYZ#0;class#Point#0" expanded="false" />
+            <element signature="method#setRGB#0;class#Point#0" expanded="false" />
+            <element signature="method#makep#0;class#Point#0" expanded="false" />
+            <element signature="method#sum#1;class#Point#0" expanded="false" />
+            <element signature="method#normalize#0;class#Point#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initLight#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#0;class#main#0" expanded="false" />
+            <element signature="method#drawLine#1;class#main#0" expanded="false" />
+            <element signature="method#drawskybox#0;class#main#0" expanded="false" />
+            <element signature="method#pointset#0;class#main#0" expanded="false" />
+            <element signature="method#getDelta#0;class#main#0" expanded="false" />
+            <element signature="method#updateFPS#0;class#main#0" expanded="false" />
+            <element signature="method#makecolmap#0;class#main#0" expanded="false" />
+            <element signature="method#loadShaderPair#0;class#main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Toaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#1971#1972#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+        <state relative-caret-position="542">
+          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#makeSmooth#0;class#Path#0" expanded="false" />
-            <element signature="method#makeSmooth#1;class#Path#0" expanded="false" />
+            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#4292#4293#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4354#4355#0" expanded="true" />
+            <element signature="e#4377#4378#0" expanded="true" />
+            <element signature="e#4411#4412#0" expanded="true" />
+            <element signature="e#4436#4437#0" expanded="true" />
+            <element signature="e#4459#4460#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -104,28 +104,29 @@ public class Camera {
             rotation.y += mouseSensitivity * delta*15;
 
         if(keyDown) {
-            dm++;
             pos.x -= Math.sin(Math.toRadians(rotation.y)) * speed;
             pos.z += Math.cos(Math.toRadians(rotation.y)) * speed;
             ismoving=true;
-        }else
+        }
         if(keyUp) {
-            dm--;
             pos.x += Math.sin(Math.toRadians(rotation.y)) * speed;
             pos.z -= Math.cos(Math.toRadians(rotation.y)) * speed;
             ismoving=true;
-        }else if(keyFast) {
-            dm++;
+        } if(keyFast) {
             pos.x += Math.sin(Math.toRadians(rotation.y - 90)) * speed;
             pos.z -= Math.cos(Math.toRadians(rotation.y - 90)) * speed;
             ismoving=true;
-        }else
+        }
         if(keySlow) {
-            dm--;
             pos.x += Math.sin(Math.toRadians(rotation.y + 90)) * speed;
             pos.z -= Math.cos(Math.toRadians(rotation.y + 90)) * speed;
             ismoving=true;
-        }else ismoving=false;
+        }
+        if(keyDown||keyFast||keyLeft||keyRight||keyUp||keySlow)
+            dm++;
+            else
+        ismoving=false;
+
     }
 
     public static void setSpeed(float speed) {
